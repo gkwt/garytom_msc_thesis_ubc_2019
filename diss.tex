@@ -73,6 +73,8 @@
 %% to create a bullet list with the provided character.
 \usepackage{pifont}
 
+\usepackage{CJKutf8}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Configure fonts for XeTeX / XeLaTeX using the fontspec package.
 %% Be sure to check out the fontspec documentation.
@@ -282,6 +284,9 @@
 % \renewcommand{\@pnumwidth}{3em}
 % \makeatother
 
+% changing the font of the glossary
+% \renewcommand*{\acsfont}[1]{ {#1}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
@@ -385,7 +390,7 @@
 \cleardoublepage	% required by tocloft package
 
 %    7. List of tables (mandatory if thesis has tables)
-\listoftables
+% \listoftables
 \cleardoublepage	% required by tocloft package
 
 %    8. List of figures (mandatory if thesis has figures)
@@ -402,6 +407,9 @@
 
 %   12. Acknowledgements (optional)
 \include{ack}
+
+% Adding a page for some epigraphs
+\include{epigraph}
 
 %   13. Dedication (optional)
 
@@ -431,13 +439,13 @@
 \bibliography{biblio}
 \end{singlespace}
 
-\appendix
+% \appendix
 %    6. Appendices (including copies of all required UBC Research
 %       Ethics Board's Certificates of Approval)
 %\include{reb-coa}	% pdfpages is useful here
-\include{appendix}
+% \include{appendix}
 
-\backmatter
+% \backmatter
 %    7. Index
 % See the makeindex package: the following page provides a quick overview
 % <http://www.image.ufl.edu/help/latex/latex_indexes.shtml>
