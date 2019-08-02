@@ -4,16 +4,196 @@
 \chapter{Experimental Techniques}
 \label{ch:exptech}
 
+\Acf{SPM} is a suite of experimental characterisation techniques that involve measuring the interaction of an extremely sharp probe with some sample, as a function of experiment parameters. The probe can then be raster scanned across the sample to give a local spatial map of the interaction, or other determinable quantities. Unlike conventional optical microscopy techniques, \ac{SPM} resolution is determined by the sharpness of the probe which can be as small as a few picometres, allowing for atomically resolved imaging that would not be possible with diffraction limited systems. 
+
+However, \ac{SPM} is highly dependent on the probe; the material and geometry of the probe can affect the measured interaction. As it is difficult to characterise the tip \textit{in situ}, structural and electronic properties of the probe are often approximated with simple models. While \ac{SPM} offers high resolution local maps of the sample, the techniques are limited to imaging small select parts of the sample (on the order of $\sim$100 nm). Additionally, the scans are generally slower than other microscopy techniques, meaning that \ac{SPM} techniques generally do not have time resolution, and are susceptible to sample drift, mechanical vibration, and other sources of measurement uncertainty.
+
+In this chapter, three \ac{SPM} techniques will be discussed in detail, including discussion of the underlying physical principles, methods of operation, and analysis of experimental data.
+
+
+
 %%%%%
 \section{Scanning tunneling microscopy}
+
+\Acf{STM} was invented in 1981 by Gerd Binning and Heinrich R\"ohrer at IBM \citep{binnig1982surface}, and was the first example of a scanning probe microscope. The \ac{STM} gives atomic resolution topographic maps of the electronic structure of a conductive sample by employing quantum tunneling between the sample and a conductive tip, controlled by sub-nanometre precise piezoelectric motors. As seen in \autoref{fig:2.1-stmsetup}, a sharp tip is brought close to a sample, with tip-sample distances ($z$) on the order of 1--\SI{10}{\angstrom}. A bias voltage difference ($V_B$) is in place between the electrodes, typically on the order of 0.01--\SI{1}{\volt}, driving the directional quantum tunneling of electrons through the vacuum potential barrier between the tip and the sample, giving a small but detectable tunneling current ($I$) on the order of picoamperes to nanoamperes. The current signal goes through a preamplifier and is transduced into a voltage signal, which can then be fed into the control system.
+
+\begin{figure} [h]
+    \centering
+    %\includegraphics[width=3in]{file}
+    \caption{\FIXME{Make a STM setup diagram here and reference it.}}
+    \label{fig:2.1-stmsetup}
+\end{figure}
+
+An intuition for the origin of this tunneling current could be gathered from a crude \ac{1D} one particle model (\autoref{fig:2.1-wkb}). The solutions of the Schr\"odinger equation in the tip and sample regions would be oscillatory free-particle wave functions\footnote{Electrons in a metal are assumed to behave like free particles.}, while inside the barrier would give wave function $\psi(z) = e^{-kz}$, with $k^2 = 2m\Phi/\hbar^2$. Here, $\Phi = V_B(z) - E$ is the work function, $E$ is the energy of the electron. If the distance $z$ between tip and sample is small enough, the wave function would be non-zero on the other side of the barrier. From the \ac{1D} \ac{WKB} approximation, the transmission coefficient is
+\begin{equation} \label{eq:intro:transfcn}
+T(z,E) = \exp{\left(-2\int_{z_1} ^{z_2} k dz \right)} = \exp{\left(-2  \int_{z_1}^{z_2} \sqrt{\frac{2m}{\hbar^2}(V_B(z) - E)} dz \right)}.
+\end{equation}
+When the barrier potential is held constant as in \ac{STM}, we have $T \propto e^{-2kz}$. This tunneling current is extremely sensitive to changes in $z$, dropping off exponentially with increasing tip-sample distances. This sensitivity allows for picometre height resolution, while the atomically sharp tip allows for sub-nanometre lateral resolution imaging.
+
+
+\begin{figure} [h]
+    \centering
+    %\includegraphics[width=3in]{file}
+    \caption{\FIXME{Make a WKB figure here.}}
+    \label{fig:2.1-wkb}
+\end{figure}
+
+
+There are two modes of \ac{STM} operation: the constant height, and the constant current mode. In constant height mode, the tip-sample distance is held constant while the tip is rastered across the sample. The corresponding fluctuations in the tunneling current is measured as a function of the spatial variables. A drawback of this mode is the possibility of crashing the tip into the sample due to tall features such as defects or step edges, damaging both the tip and the sample. Alternatively, constant current mode holds the tunneling current constant by using a feedback loop to adjust the tip height as it scans across the sample. In this case, the tip height is recorded as a function of lateral $(x,y)$ position of the tip, giving a tunneling current isosurface plot (\autoref{fig:2.1-stmexample}).
+
+\begin{figure} [h]
+    \centering
+    %\includegraphics[width=3in]{file}
+    \caption{\FIXME{Put an STM image here of something.}}
+    \label{fig:2.1-stmexample}
+\end{figure}
+
+% also talk about how to interpret the data, not exactly a physical topography
+It is important to note that an \ac{STM} image should not be interpreted as a physical topography, but rather the electronic topography of the surface at a given bias. This is because the tunneling current is dependent on the \ac{DOS} of the sample and the tip. A larger `height' indicates a higher density of states at a given point and bias, and not necessarily a taller feature on the sample. More details on the tunneling current is given in \autoref{sec:exptech:sts}.
+
+
 
 
 %%%%%
 \section{Scanning tunneling spectroscopy}
+\label{sec:exptech:sts}
+
+\Acf{STS} is a technique similar to \ac{STM}, but allows for energetic resolution of the \ac{LDOS} of the sample. At a point over the sample, the tip is held at a constant height and the current feedback loop is turned off. The tunneling current is then measured as the bias between tip and sample is swept across a range of values, giving a current reading as a function of bias, $I(V)$.
+
+The relationship between the $I(V)$ signal and the \ac{LDOS} can be understood by returning to the \ac{1D} model (\autoref{fig:2.2-stsldos}). The tip is assumed to have a constant density of states ($\rho_t(E) = 1$). The bias voltage shifts the energy of the electrons in the tip relative to those of the sample. At positive biases, the Fermi level\footnote{The Fermi level only applies when $T = 0$K. Otherwise, the electrons are below the chemical potential energy $\mu$.} of the tip shifts up, allowing electrons to tunnel into the unoccupied states of the sample. Conversely, at negative biases, the Fermi level of the tip shifts down, allowing electrons to tunnel from the occupied sample states into the tip. Changes in the sample density of states $\rho_s(E)$, both occupied and unoccupied, will open new tunneling channels that are reflected in changes in the measured $I(V)$. More details on the tunneling current and the recovery of the density of states is described in the below sections.
+
+\begin{figure} [h]
+    \centering
+    %\includegraphics[width=3in]{file}
+    \caption{\FIXME{Add a diagram and explain exactly how the LDOS relates to I(V).}}
+    \label{fig:2.2-stsldos}
+\end{figure}
+
+The technique can be further extended by performing \ac{STS} point-by-point in a grid, giving a spatial map of the \ac{LDOS} over an area of the sample. This is done in conjunction with \ac{STM}, with the tip pausing at grid points, height fixed and feedback loop turned off, for a \ac{STS} spectra, before resuming the \ac{STM} scan. The added time for point-by-point spectra means that \ac{STM}/\ac{STS} grids can take hours to complete, during which changes in the sample or the tip can affect measurements. 
+
+
+\subsection{Tunneling theory}
+\FIXME{Add Bardeen, Tersoff and Hamann, Feuchtwang, Caroli et al., JB Pendry, Gottlieb and Wesoloski citations.}
+In order to extract quantitative information from \ac{STS}, we must understand the theory of quantum tunneling, and how it applies to the tip-sample configuration of the experiment. The first theoretical formulation of many particle tunneling was developed by \textit{Bardeen} in 1960, using what was called a `transfer Hamiltonian', which was then applied to \ac{STM}/\ac{STS} by \textit{Tersoff and Hamann}. 
+
+It is important to note that Bardeen's formulation is an approximation and does not take into account many-body effects or strong tip-sample interactions. To date, the most rigorous analytic tunneling theory is formulated using \acp{NEGF}, first developed by \textit{Feuchtwang} and later expanded upon by \textit{Caroli et al.}, which can address the short-comings of the transfer Hamiltonian. However, there is currently no method to utilise \acp{NEGF} to extract \ac{LDOS} from experimental \ac{STS} data. Furthermore, the \ac{NEGF} tunneling theory has been demonstrated to be reducible to Bardeen's tunneling theory, and thus, this section will discuss the transfer Hamiltonian approach to tunneling.
+
+% taken from Guide on Tunneling Theory
+In assuming that the tip and sample are independent with weak interaction between them, we can define the tip and sample Hamiltonians
+\begin{align}
+H_{s}\psi &= -\frac{\hbar^2}{2m} \nabla^2 \psi + V_{s} \psi, \\
+H_{t}\phi &= -\frac{\hbar^2}{2m} \nabla^2 \phi + V_{t} \phi .
+\end{align}
+Here, the sample and tip potentials only overlap in the barrier region. The solutions to the eigenvalue equations for the two Hamiltonians are the ``sample'' and ``tip" states, respectively. 
+
+\sloppy Consider an initial tip state $\psi(0)$ which satisfies the eigenvalue equation $H_{s}\psi(0) = \epsilon \psi(0)$. When tunneling is weak enough, then for some small time $t$ the sample states would be given by $\psi(t) = e^{-itH_{s}/\hbar} \psi(0) = e^{-it\epsilon/\hbar} \psi(0) $. For all $t$, we expand over the tip states $\phi_k$ satisfying the eigenvalue equation $H_{t}\phi_k = \epsilon_k \phi_k$, giving us
+\begin{equation}
+\psi(t) = e^{-it\epsilon/\hbar} \psi + \sum_k a_k(t) \phi_k,
+\end{equation}
+where $a_k$ are coefficients of the expansion. By plugging in the state to the time-dependent Schr\"odinger equation, and separately taking the time derivative, we have two expressions for $\frac{\partial \psi}{\partial t}$. Equating gives us
+\begin{equation}
+i\hbar \sum_k \frac{d}{dt} a_k(t) \phi_k = e^{-it\epsilon / \hbar} (H-H_{s})\psi + \sum_k a_k(t) (\epsilon_k \phi_k + (H-H_{t})\phi_k),
+\end{equation}
+where $H$ is the Hamiltonian from the full time-dependent Schr\"odinger equation, and $\epsilon_k$ are the eignenenergies of the tip states. Taking the inner product with $\phi_j$, for any $j$-th tip state
+\begin{equation} \label{eq:bardeen:scatteringprob}
+i\hbar \frac{d}{dt} a_j(t) = e^{-it\epsilon/\hbar} \Bra{\phi_j}H-H_{sam} \Ket{\psi} + E_j a_j(t) + \sum_k a_k(t) \Bra{\phi_j} H - H_{tip} \Ket{\phi_k}.
+\end{equation}
+
+Due to weak tunneling, for a little while (small $t$), the $a_k(t)$ terms are zero, and we can solve for the $|a_j(t)|^2$. As we are approximating the tip states to be orthogonal to the sample state, $|a_j(t)|^2 \approx |\Braket{\phi_j|\psi(t)}|^2$, which is the transition probability. Taking the time derivative, and summing over all $k$, we have the scattering probability
+\begin{equation}
+\frac{d}{dt}\sum_k |a_k(t)|^2 = \frac{d}{dt} 4 \sum_k \frac{\sin^2 (t(E_k - \epsilon)/2\hbar)}{(E_k - \epsilon)^2} | \Bra{\phi_k} H-H_{sam} \Ket{\psi}  | ^2.
+\end{equation}
+
+The sum on the right hand side of Eq.~\ref{eq:bardeen:scatteringprob} is difficult to solve, and so it must be approximated. By defining $\abs{\mathfrak{M}}^2 = |\Bra{\phi} H-H_{sam} \Ket{\psi}| ^2$, and $P_t(x) = \sin^2(tx/2\hbar)/x^2$, we can write
+\begin{equation}
+\frac{d}{dt}\sum_k |a_k(t)|^2 = \frac{d}{dt} 4 \sum_k P_t(E_k - \epsilon) \abs{\mathfrak{M}}^2.
+\end{equation}
+
+Here, we notice that $P_t$ is the sinc function, which contributes to the integral mostly in the region of $[-2h/t, 2h/t]$. So as $t$ grows, the interval becomes smaller and smaller, until the tip energy $E_k$ can be approximated to be constantly distributed in the interval. The sum can then be approximated to be an integral, with $\rho_{tip}(\epsilon)$ being the number of tip states near the energy of the sample state $\epsilon$. 
+\begin{align}
+\sum_k P_t(E_k - \epsilon) \abs{\mathfrak{M}}^2 &\approx \abs{\mathfrak{M}}^2(\psi) \rho_{tip}(\epsilon) \int_{-2h/t}^{2h/t} P_t(E) dE \\
+& \approx \abs{\mathfrak{M}}^2(\psi) \rho_{tip}(\epsilon) \int_{-\infty}^{\infty} P_t(E) dE = \abs{\mathfrak{M}}^2(\psi) \rho_{tip} \frac{\pi t}{2\hbar}.
+\end{align}
+Finally, the scattering rate (or the transition probability) is given by
+\begin{equation}
+\frac{d}{dt} \sum_k |a_k(t)|^2 \approx \frac{d}{dt}\left( \frac{2\pi t}{\hbar} \abs{\mathfrak{M}}^2(\psi) \rho_{tip}(\epsilon) \right) = \frac{2 \pi}{\hbar} \abs{\mathfrak{M}}^2(\psi) \rho_{tip}(\epsilon).
+\end{equation}
+
+We make the assumption that the occupation rates of sample/tip are independent, and that they are in equilibrium (ie. the chemical potentials of tip and sample, $\mu_t$ and $\mu_s$ respectively, do not change).
+
+Assuming the statistics of the electrons are governed by the Fermi-Dirac distribution at temperature $\theta$ and chemical potential $\mu$
+\begin{equation}
+F_{\mu, \theta}(x) = \frac{1}{e^{(x-\mu)/k_B\theta} +1}
+\end{equation}
+the rate of scattering \emph{from} the sample ($\psi_n$) to an \textbf{empty} tip state is
+\begin{equation} \label{eq:tersoff:totip}
+(1-F_{\mu_t, \theta}(\epsilon_n)) \frac{2\pi}{\hbar} \rho_{tip}(\epsilon_n) \abs{\mathfrak{M}}^2(\psi_n)
+\end{equation}
+and the rate of scattering \emph{into} the one sample state ($\psi_n$) from all \textbf{occupied} tip state is
+\begin{equation} \label{eq:tersoff:fromtip}
+F_{\mu_t,\theta}(\epsilon_n) \frac{2\pi}{\hbar} \rho_{tip}(\epsilon_n) \abs{\mathfrak{M}}^2(\psi_n)
+\end{equation}
+The occupation rate of the sample would be $F_{\mu_s,\theta}(\epsilon_n)$. 
+
+From the above values, we can get the current. The current is (with a factor of $e$, the electrical charge) the difference between
+\begin{enumerate}
+\item (probability of $\psi_n$ state being empty) $\times$ (rate Eq.~\ref{eq:tersoff:fromtip} of tip $\rightarrow$ sample)
+\item (probability of $\psi_n$ state being occupied) $\times$ (rate Eq.~\ref{eq:tersoff:totip} of sample $\rightarrow$ tip)
+\end{enumerate}
+summed over the contribution for all $n$ sample states
+\begin{equation}
+I = \frac{2\pi e}{\hbar}\sum_n \left[ F_{\mu_t,\theta}(\epsilon_n) (1-F_{\mu_s,\theta}(\epsilon_n)) - (1-F_{\mu_t, \theta}(\epsilon_n)) F_{\mu_s,\theta}(\epsilon_n)   \right] \times \rho_{tip}(\epsilon_n) \abs{\mathfrak{M}}^2(\psi_n)
+\end{equation}
+Note that this is not real perturbation theory, as $\phi$ and $\psi$ are non-orthogonal and are states of different Hamiltonians.
+
+Taking the limit of $\theta=0$, the Fermi-Dirac equations can be approximated as step functions. Define $\mu_a = \min(\mu_s,\mu_t)$ and $\mu_b = \max(\mu_s,\mu_t)$, (this dictates the direction of current flow). Taking the sum to be an integral gives us
+\begin{equation} \label{eq:tersoff:current}
+I \approx \frac{2\pi e}{\hbar} \int_{\mu_a} ^{\mu_a} \rho_{tip}(E) T(E) \rho_{sam}(E) dE
+\end{equation}
+where $T$ is the average of $\abs{\mathfrak{M}}^2(\psi_n)$ over all sample states $\psi_n$, with energy close to $\mathcal{E}$, and is the transmission probability. This can be approximated using \ac{WKB} giving Eq.~\ref{eq:intro:transfcn}.
+
 
 \subsection{Normalisation of $dI/dV$}
 
-
+From the Bardeen, and Tersoff and Hamann equation, we can extract the density of states of the sample from the \ac{STS} $I(V)$ spectra. In \autoref{eq:tersoff:current}, the current is a convolution of the \ac{DOS} of the tip and sample, and the transmission probability. Assuming that the \ac{DOS} of the tip is featureless, or equal to unity
+\begin{equation}
+I \propto \int_0 ^{eV} \rho_s(E) T(E,V) dE.
+\end{equation}
+In taking the derivative with respect to the bias voltage, and applying Leibniz integral rule, we obtain the differential conductance
+\begin{equation} \label{eq:feenstra:derivative}
+\frac{dI}{dV} \propto e \rho_s(E=eV) T(E=eV,eV) + e \int_0^{eV} \rho_s(E) \frac{d}{dV} T(E,V) dE.
+\end{equation}
 
 %%%%%
 \section{Scanning tunneling microscopy induced luminescence}
+
+% allows us to probe the excited states of molecules on surface
+When performing \ac{STM}
+
+
+
+
+
+
+
+\endinput
+
+
+
+
+
+
+
+
+\subsection{garbage}
+\begin{equation}
+    I_t \propto e^{-2kz},
+\end{equation}
+
+where $k$ is 
+
+Has proven to be very powerful in understanding the topological and electronic features of surfaces near the atomic level. 
+
+The works \citep{tersoff19931} of \textit{Young et al.}, with the creation of the topografiner, and \textit{Teague}, with the demonstration of vacuum tunneling between gold electrodes, preceeded the invention of \ac{STM}. The topografiner used a piezoelectric driver to scan surfaces with a probe at very small distances, advancing the technology required for the \ac{STM}. Teague's experiments revealed the possibility of vacuum tunneling, at the voltages and gap widths used today in \ac{STM}. 
+
+\ac{STM} is based on the quantum tunneling of electrons through a potential barrier. In experiment, a tip is brought very close to the sample of interest. A bias is applied to the system to allow for tunneling, and the measured current gives information about the sample's \ac{LDOS}. The tip-sample distance is usually around 5 to 15 Angstroms, with the tunneling current in the nano-ampere range. The voltage applied can range from 10mV to 10V in either directions.
