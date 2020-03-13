@@ -27,7 +27,7 @@ Despite advantages in manufacturing and versatility, organic materials possess l
 
 %On the other hand, light excitation of inorganic photovoltaics generate unbound electrons and holes, which can separate to the cathode and anode respectively.
 
-Understanding the role of excitons is also important to the development of \ac{OLED} devices. Organic semiconductors emit energy in the form of light when excitons recombine---the excited electron ``falls" back into the hole. The colour and intensity of the emitted light is dependent on the energy and recombination rate of excitons formed in the material. In all applications of organic semiconductors, understanding exciton physics in organic materials with different electronic properties is key to the improvement of organic semiconductor devices.
+Understanding the role of excitons is also important to the development of \ac{OLED} devices. Organic semiconductors emit energy in the form of light when excitons recombine---the excited electron ``falls" back into the hole. The colour and intensity of the emitted light is dependent on the energy and recombination rate of excitons formed in the material. \FIXME{citation} The goal in light emitting applications is to maximize exciton recombination, while tuning the optical properties of the exciton. Understanding the underlying physics of exciton formation, dissociation, and recombination will not only optimize device performance, but contribute to the understanding of excited state phenomena in organic molecules.
 
 
 % Organic semiconductors are a promising class of materials with a multitude of applications to electronics. 
@@ -40,11 +40,9 @@ Understanding the role of excitons is also important to the development of \ac{O
 %%%%%
 \section{Excitons in organic semiconductors}
 
-When looking at exciton physics in organic semiconductors, there are several energy scales we need to consider (\autoref{fig:intro:exciton}). 
+When looking at exciton physics in organic semiconductors, there are several energy scales we need to consider (\autoref{fig:intro:exciton}). The band gap is measured as the energy $E_{gap}$ from the \ac{HOMO} to the \ac{LUMO}, which are analogous to the valence and conductance bands inside a solid-state system, respectively. The energy of the \ac{HOMO} can be characterized by the ionization potential $E_I$, the energy required to excite an electron from the occupied orbital into the vacuum level, and \ac{LUMO} by the electron affinity $E_A$, the energy released by the addition of an electron from the vacuum level into the unoccupied orbital.
 
-In \acp{OPV}, electrons inside of an organic semiconductor are excited by photons that have energies greater than the band gap of the molecule. The band gap is measured as the energy $E_{gap}$ from the \ac{HOMO} to the \ac{LUMO}, which are analogous to the valence and conductance bands inside a solid-state system. The energy of the \ac{HOMO} can be characterized by the ionization potential $E_I$, the energy required to excite an electron from the occupied orbital into the vacuum level, and \ac{LUMO} by the electron affinity $E_A$, the energy released by the addition of an electron from the vacuum level into the unoccupied orbital.
-
-Due to the low dielectric constant in organic materials, electric fields between charges are stronger due to lower screening. The attractive Coulomb force between the electron-hole pair favours the formation of an exciton with a lower energy known as the optical gap $E_{opt}$. The exciton binding energy $E_b$ is the difference between the band gap and the optical gap, and is typically on the order of $\sim \SI{1}{eV}$ for organic semiconductors \citep{knupfer2003exciton}. For excitons to dissociate, enough energy needs to be supplied to overcome the binding energy: thermal energy, which is on the order of $k_B T \sim \SI{0.1}{meV}$ ($k_B$ is the Boltzmann constant), is insufficient for thermal dissociation of excitons in organic photovoltaics.
+Due to the low dielectric constant in organic materials, electric fields between charges are stronger due to lower screening. The attractive Coulomb force between the excited electron and the hole favours the formation of an exciton with a lower energy known as the optical gap $E_{opt}$. The exciton binding energy $E_b$ is the difference between the band gap and the optical gap, and is typically on the order of $\sim \SI{1}{eV}$ for organic semiconductors \citep{knupfer2003exciton}. For excitons to dissociate, enough energy needs to be supplied to overcome the binding energy: thermal energy, which is on the order of $k_B T \sim \SI{0.1}{meV}$ ($k_B$ is the Boltzmann constant), is insufficient for thermal dissociation of excitons in organic materials.
 
 \begin{figure}[h]
     \centering
@@ -53,7 +51,7 @@ Due to the low dielectric constant in organic materials, electric fields between
     \label{fig:intro:exciton}
 \end{figure}
 
-Typically, \ac{OPV} systems are composed of two species of organic semiconducting materials: an electron donor and an electron acceptor molecule. In 1986, \textit{C.W. Tang} demonstrated the importance of the acceptor-donor heterojunction between organic semiconductors to the dissociation of excitons into free charge carriers, and hence the \ac{PCE} of \ac{OPV} devices \citep{tang1986two}. Excitons generated in the system act as quasi-particles, and can diffuse as a pair through the material. At the interface, mismatched electron energy levels between the acceptor and donor generate a high electric field that pulls apart the electron-hole pair (\autoref{fig:intro:ct}). Acceptor organic molecules have high electron affinity, making it energetically favourable for the excited electron to transfer into the acceptor molecule \ac{LUMO}. This delocalizes the exciton between two molecules, forming a charge transfer complex, and allows for exciton dissociation and electric current generation in the system \citep{bernardo2014delocalization}.
+Typically, \ac{OPV} systems are composed of two species of organic semiconducting materials: an electron donor and an electron acceptor molecule. In 1986, \textit{C.W. Tang} demonstrated the importance of the acceptor-donor heterojunction between organic semiconductors to the dissociation of excitons into free charge carriers \citep{tang1986two}. In \acp{OPV}, electrons inside of an organic semiconductor are excited from \ac{HOMO} to the \ac{LUMO} by photons that have energies greater than the band gap of the molecule. Excitons generated in the system act as quasi-particles, and can diffuse as a pair through the material. At the interface, mismatched electron energy levels between the acceptor and donor generate a high electric field that pulls apart the electron-hole pair, similar to the process at p-n junctions in inorganic PV systems. Acceptor organic molecules have high electron affinity, making it energetically favourable for the excited electron to transfer into the acceptor molecule \ac{LUMO} (\autoref{fig:intro:ct}). This delocalizes the exciton between two molecules, forming a \ac{CT} complex, and allows for exciton dissociation and electric current generation in the system \citep{bernardo2014delocalization}.
 
 \begin{figure}[h]
     \centering
@@ -62,27 +60,44 @@ Typically, \ac{OPV} systems are composed of two species of organic semiconductin
     \label{fig:intro:ct}
 \end{figure}
 
-Through the entire process, from exciton generation to dissociation, there is a probability of exciton recombination where the excited electron re-emits the energy as a photon and energetically ``falls" back into the hole. 
+Excitons in \ac{OPV} materials typically have diffusion lengths of 1\SI{-30}{nm} \citep{proctor2013charge}, and have lifetimes ranging from attoseconds to microseconds \citep{tamai2015exciton}. There is a probability of exciton recombination, in which the excited electron drops in energy and re-emits the $E_{opt}$ as light, if the exciton is unable to diffuse to an interface to form the \ac{CT} state. Even after formation of the \ac{CT} complex, recombination can still occur albeit with a different spectroscopic signature.
 
+In light emission applications, the reverse of the photoexcitation process in \acp{OPV} is observed. A year after the two-layer \ac{OPV} publication, \emph{C.W. Tang and S.A. Van Slyke} created the first practical \ac{OLED} device \citep{Tang1987}. Using electron and hole transport layers, charges are directed from the cathode and anode into an emissive layer composed of organic semiconducting molecules, allowing for exciton formation and subsequent recombination. However, complications arise due to the nature of excitons in organic molecules. Vibration modes within the molecule create discrete energy states within the molecular orbitals (\autoref{fig:intro:vib}). Relaxation between these discrete states can change the energy of the exciton, thereby changing the colour of emitted light. \FIXME{citation} Additionally, excited triplet states can form in organic semiconductors, which generally have longer lifetimes and can decay non-radiatively, reducing the efficiency of \ac{OLED} devices. Exciton recombination from triplet states, or phosphorescence, are more rare and lower in energy when compared to recombination from excited singlet states, or fluorescence \citep{kohler2009triplet}.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics{}
+    \caption{\FIXME{Add energy diagram with vibrational modes: phosphorescence and fluorescence.}}
+    \label{fig:intro:vib}
+\end{figure}
 
-
-
-
-When an electron is excited in an organic semiconductor, whether by the absorption of a photon, in the case of photovoltaics, or injection of a charges, in the case of \ac{OLED} devices, excitons form rather than free charges due to the electric field generated by the local environment. In materials with a low dielectric constant, the attractive force from the hole along with the repulsive forces from neighbouring electrons are poorly screened, creating an electronic landscape that favours localisation of the excited electron. 
-
-In \acp{OPV}, the goal is to separate the exciton into the free charges. Dissociation can occur in the presence of a high electric field, usually found a defects of interfaces between materials that have 
-
-
-
-Excitons are formed when electrons are excited into a higher energy state but remain bound to the positively charged holes left behind. In materials that have poor electrical screening, neighbouring electrons and the hole creates an electric field that energetically favours the formation of an exciton. 
-
-
-For a molecule in the ground state, the electrons occupy the lowest energy states, pairing off with two electrons with opposite spins in each orbital. 
 
 
 %%%%%
 \section{Scanning probe techniques}
+
+% talk about what has been done, and why we should use spm
+% Extensive research has been carried out on the optoelectronic properties of organic semiconductors, but often in the context of a device or a bulk ensemble of molecules. However, exciton formation, dissociation, and charge transfer happens on the molecular scale. 
+
+\Acf{SPM} is a suite of experimental characterization techniques that involve measuring the interaction, as a function of experiment parameters, between an extremely sharp probe and some sample. The probe can then be raster scanned, using precise piezoelectric motors, across the sample to give a local spatial map of the interaction, or other determinable quantities. Unlike conventional optical microscopy techniques, \ac{SPM} resolution is determined by the sharpness of the probe which can be as small as a few picometres, allowing for real-space atomically resolved imaging that would not be possible with diffraction limited systems.
+
+Three \ac{SPM} techniques are employed in the work presented in this thesis: \ac{STM}, \ac{STS}, and \ac{STML}, which are all based on the tunnelling of electrons between the a metallic tip and sample, an organic semiconducting molecule supported by a conducting substrate. These three techniques can map out, with atomic resolution, the local structural, electronic, and optical properties of small assemblies of organic semiconducting molecules. The details of the techniques will be discussed in \autoref{ch:exptech}.
+
+Extensive research on organic semiconducting molecules have been conducted, but often in the context of a device, or as a bulk ensemble of molecules. However, changes in heterojunction geometry, local electronic environment, molecular structure, can drastically affect the optoelectronic properties which occur at the nanometre length scale. \ac{SPM} can directly probe these effects at sub-molecular resolution, allowing for correlation between electron and exciton physics with changes in molecular configuration.
+
+% In \ac{STM}, atomic resolution topography of the electronic landscape is obtained by measuring fluctations in the tunnelling current as the tip moves across our organic molecule. By sweeping the bias between the tip and the sample, we can identify resonances in the \ac{LDOS} spectroscopy as a function of energy corresponding to molecular orbitals. Performing this \ac{STS} measurement pixel-by-pixel, we can map out the spatial distribution of the occupied and unoccupied molecular states. Additionally, the tunnelling of charges between the tip and sample can generate local excitons in the organic semiconductor. In the \ac{STML} technique, these excitons can be optically detected when they recombine and emit an photon. This permits the mapping of the exciton formation, and, by spectroscopically resolving the emitted photons, the optical gap within the molecule. 
+
+% talk about the disadvantages.
+% There are disadvantages to using \ac{SPM} techniques. In particular, \ac{SPM} is highly dependent on the probe; the material and geometry of the probe can affect the measured interaction. The tip can be modified by indentation into a metallic surface, 
+
+% This can affect the quality of topography, spectroscopy, and luminescence signal. Scanning tunnelling techniques also require that the molecules are deposited on a conducting substrate. Molecule-substrate interactions can obscure optoelectronic properties of the free molecule. 
+
+% Additionally, molecule-substrate interaction can affect the 
+
+% As it is difficult to characterize the tip \textit{in situ}, structural and electronic properties of the probe are often approximated with simple models.
+
+% While \ac{SPM} offers high resolution local maps of the sample, the techniques are limited to imaging small select parts of the sample (on the order of $\sim$100 nm). Additionally, the scans are generally slower than other microscopy techniques, meaning that \ac{SPM} techniques generally do not have time resolution, and are susceptible to sample drift, mechanical vibration, and other sources of measurement uncertainty.
+
 
 % talk about how they are used
 % studies that have used SPM for organic molecules before
