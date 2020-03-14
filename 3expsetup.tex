@@ -10,31 +10,90 @@ In this chapter, I will discuss the instrument and optical setup used, along wit
 
 \section{The microscope}
 
-All experimental measurements were made on an Omicron \ac{UHV} low temperature \ac{SPM}. Experimental data was obtained at liquid helium temperatures ($\sim \SI{4.5}{K}$) and at pressures below $1 \times 10^{-11}$ mbar. 
+All experimental measurements were made on an Omicron \ac{UHV} \ac{LT} \ac{SPM} (\autoref{fig:expsetup:omicron}). Experimental data was obtained at \ac{LHe} temperatures ($\sim \SI{4.3}{K}$) and at pressures around $1 \times 10^{-11}$ mbar. 
 
-The entire microscope is inside of an ultra-low vibration facility (dubbed ``the pod"), where it sits on a $\sim \SI{36}{tonne}$ inertial concrete block that is resting on six pneumatic isolators. To further decouple vibrations from the main building from the microscope, the pod is surrounded by a double-walled concrete enclosure containing acoustically isolating material, and rests on a foundation separate from the main building. Small feed-through openings allow wires to be passed from the microscope to a control unit outside the pod. The microscope can then be remotely operated using a computer in a separate control room.
+\begin{figure} [h]
+    \centering
+    %\includegraphics[width=3in]{file}
+    \caption{\FIXME{Image of the microscope.}}
+    \label{fig:expsetup:omicron}
+\end{figure}
 
-The microscope is composed of two main chambers, each of which will be discussed below.
+The entire microscope is inside of an ultra-low vibration facility (dubbed ``the pod"), where it sits on a $\sim \SI{36}{tonne}$ inertial concrete block that is resting on six pneumatic isolators. To further decouple vibrations from the main building from the microscope, the pod is surrounded by a double-walled concrete enclosure containing acoustically isolating material, and rests on a foundation separate from the main building. Small feed-through openings allow wires to be passed from the microscope to a control unit outside the pod. The microscope can then be remotely operated using a computer in a separate control room. More details on the performance and design of the ultra-low vibration facility is given in reference \citep{macleod2015ultra}.
+
+The microscope is composed of two main chambers: the preparation and the \acf{LT} chamber. The preparation chamber is typically at a base pressure of $\sim 1\times 10^{-10}$ mbar, minimizing contamination during sample preparation. In this chamber, the metallic substrates are cleaned by repeated sputtering and annealing. Decoupling layers of \ch{NaCl} can then be deposited onto the surface using a home-built Knudsen evaporator. The substrates are then transferred into the \ac{LT} chamber for imaging and experimentation.
+
+The \ac{LT} chamber is separated from the preparation chamber by a gate valve, and has a base pressure of $\sim 1\times 10^{-11}$ mbar. Samples are often stored in this chamber on a rotating carousel, due to the cleanliness and lower pressure. The samples can be loaded into the \ac{SPM}, which is kept at $\sim \SI{4.3}{K}$ by a cryostat of \acf{LHe} surrounded by a liquid nitrogen bath. With the sample inside the \ac{SPM}, molecules are thermally deposited on the cold sample using an \ac{OMBE} evaporator. At such low temperatures, the molecules are more stable on insulating \ch{NaCl} layers, and less diffusive, preventing aggregation and self-assembly \FIXME{citation}. A ceramic heater in the sample stage allows for annealing in the \ac{LT} chamber. For more information on the equipment in the chambers, including the evaporators, and the sample plate design, refer to \citep{cochrane2017single, roussy2016coupling}. 
+
+\subsection{Scanning probe with optical access}
 
 
-\subsection{Preparation chamber}
-
-The preparation chamber is
-
-ith pressures maintained at around $1 \times 10^{-9}$ mbar. The presence of cryogens in the measurement 
-
-\subsubsection{Substrates}
-
-\subsubsection{Molecules}
-
-
-
-\subsection{Low-temperature chamber}
 
 
 
 \subsection{Tip preparation}
 In order to prepare 
+
+
+
+
+\section{Sample preparation}
+
+Sample preparation involves cleaning the substrate, depositing the \ch{NaCl} film, and depositing the molecules. In this thesis, five different organic semiconducting molecules were studied, each with different deposition parameters. All sample preparation procedures will be discussed in detail.
+
+\subsection*{Ag(111) substrate}
+
+A top hat silver crystal with (111) termination (Matek GmbH) is the primary substrate used for experiments. The crystal surface is cleaned by sputtering for \SI{20}{\minute} with ionized \ch{Ar} gas, with ionizing potential $\sim \SI{1}{kV}$ and preparation chamber pressures at $P_{prep} \approx 3 \times 10^{-6}$ mbar. The substrate is then annealed using an e-beam heater at $T_{sub} = \SI{420}{\celsius}$ for another \SI{20}{\minute}. This is repeated 2--3 times depending on the status of the crystal surface.
+
+A typical scan of a clean Ag(111) surface is seen in \autoref{fig:expsetup:Ag111}. When scanned with a sharp metallic tip, step heights are typically $\sim\SI{2}{\angstrom}$, and the \ac{STS} point spectra has a ``kink" at \SI{-67}{mV}. This corresponds to a step in the density of states, approximated by $dI/dV$, which is a result of the surface state of Ag(111) \citep{hovel2001modification}. 
+
+\begin{figure} [h]
+    \centering
+    %\includegraphics[width=3in]{file}
+    \caption{\FIXME{Ag(111) with few defects., also show the STS/dIdV.}}
+    \label{fig:expsetup:Ag111}
+\end{figure}
+
+
+
+\subsection*{Au(111) on Mica}
+
+As an alternate substrate, a thin film of (111) terminated gold on mica was used. The cleaning is similar to the procedures for Ag(111), but with sputtering potential $\sim \SI{0.75}{kV}$, and annealing temperature $T_{sub} = \SI{345}{\celsius}$.
+
+An \ac{STM} image of the Au(111) thin film (\autoref{fig:expsetup:Au111}) shows a herringbone structure as a result of the reconstruction of the surface into regions of face centred cubic and hexagonal close packed atomic arrangements \FIXME{citation}. Step heights on the surface are $\sim \SI{2}{\angstrom}$. The \ac{STS} spectra shows the onset of the surface state to be at around $\SI{-450}{mV}$.
+
+\begin{figure} [h]
+    \centering
+    %\includegraphics[width=3in]{file}
+    \caption{\FIXME{Ag(111) with few defects., also show the STS/dIdV.}}
+    \label{fig:expsetup:Au111}
+\end{figure}
+
+
+\subsection*{NaCl deposition}
+
+Layers of \ch{NaCl} were deposited onto the metallic substrates for all experiments discussed in this thesis. The film grows with (100) surface. This insulating film partially decouples the molecule from the metallic substrate, while still allowing for tunnelling between the tip and sample \FIXME{cite the decoupling paper}. The decoupling is also necessary for \ac{STML} experiments, as emission from excitons in the molecule are quenched by electronic pathways between the molecule and the metal substrate.
+
+NaCl was thermally deposited using a homebuilt Knudsen cell. The thickness of the film can be controlled by deposition temperature, time, and substrate temperature. For our experiments, we were interested in both bilayer and trilayer NaCl. With the substrate held at $T_{sub} = \SI{100}{\celsius}$, NaCl was deposited for \SI{12}{\minute} with deposition temperature at approximately \SI{550}{\celsius}. 
+
+\begin{figure} [h]
+    \centering
+    %\includegraphics[width=3in]{file}
+    \caption{\FIXME{Bi and tri layer of nacl on ag111}}
+    \label{fig:expsetup:2-3NaCl}
+\end{figure}
+
+\ac{STM} of bilayer and trilayer NaCl on Ag(111) is shown in \autoref{fig:expsetup:2-3NaCl}, seen as square shaped terraces. The step height of bilayer NaCl is around \SI{3}{\angstrom}, while trilayer is at \SI{4.5}{\angstrom}. The presence of the NaCl layers shifts the onset of the surface state of the metallic substrates (\autoref{fig:expsetup:NaClstate}). This signature in the \ac{STS} spectra is useful for determining whether a surface is metallic or insulating NaCl.
+
+\begin{figure} [h]
+    \centering
+    %\includegraphics[width=3in]{file}
+    \caption{\FIXME{NaCl state on ag and au}}
+    \label{fig:expsetup:NaClstate}
+\end{figure}
+
+\subsection*{Molecule deposition}
+
 
 
 
@@ -44,10 +103,10 @@ In order to prepare
 
 
 
-
 \section{Density functional theory methods}
 
-Molecular orbital and energy level of free molecules are calculated using \ac{DFT} package \emph{Gaussian 16} \citep{frisch2016gaussian}. Before the single-point
+Molecular orbital and energy level of free molecules are calculated using \ac{DFT} package \emph{Gaussian 16} \citep{frisch2016gaussian}. For 
+\citep{rdkit}
 
 
 %%%%%
