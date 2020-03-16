@@ -19,21 +19,85 @@ All experimental measurements were made on an Omicron \ac{UHV} \ac{LT} \ac{SPM} 
     \label{fig:expsetup:omicron}
 \end{figure}
 
-The entire microscope is inside of an ultra-low vibration facility (dubbed ``the pod"), where it sits on a $\sim \SI{36}{tonne}$ inertial concrete block that is resting on six pneumatic isolators. To further decouple vibrations from the main building from the microscope, the pod is surrounded by a double-walled concrete enclosure containing acoustically isolating material, and rests on a foundation separate from the main building. Small feed-through openings allow wires to be passed from the microscope to a control unit outside the pod. The microscope can then be remotely operated using a computer in a separate control room. More details on the performance and design of the ultra-low vibration facility is given in reference \citep{macleod2015ultra}.
+The entire microscope is inside of an ultra-low vibration facility (dubbed ``the pod"), where it sits on a \SI{36}{tonne} inertial concrete block that is resting on six pneumatic isolators. To further decouple vibrations from the main building from the microscope, the pod is surrounded by a double-walled concrete enclosure containing acoustically isolating material, and rests on a foundation separate from the main building. Small feed-through openings allow wires to be passed from the microscope to a control unit outside the pod. The microscope can then be remotely operated using a computer in a separate control room. More details on the performance and design of the ultra-low vibration facility is given in reference \citep{macleod2015ultra}.
 
 The microscope is composed of two main chambers: the preparation and the \acf{LT} chamber. The preparation chamber is typically at a base pressure of $\sim 1\times 10^{-10}$ mbar, minimizing contamination during sample preparation. In this chamber, the metallic substrates are cleaned by repeated sputtering and annealing. Decoupling layers of \ch{NaCl} can then be deposited onto the surface using a home-built Knudsen evaporator. The substrates are then transferred into the \ac{LT} chamber for imaging and experimentation.
 
-The \ac{LT} chamber is separated from the preparation chamber by a gate valve, and has a base pressure of $\sim 1\times 10^{-11}$ mbar. Samples are often stored in this chamber on a rotating carousel, due to the cleanliness and lower pressure. The samples can be loaded into the \ac{SPM}, which is kept at $\sim \SI{4.3}{K}$ by a cryostat of \acf{LHe} surrounded by a liquid nitrogen bath. With the sample inside the \ac{SPM}, molecules are thermally deposited on the cold sample using an \ac{OMBE} evaporator. At such low temperatures, the molecules are more stable on insulating \ch{NaCl} layers, and less diffusive, preventing aggregation and self-assembly \FIXME{citation}. A ceramic heater in the sample stage allows for annealing in the \ac{LT} chamber. For more information on the equipment in the chambers, including the evaporators, and the sample plate design, refer to \citep{cochrane2017single, roussy2016coupling}. 
+The \ac{LT} chamber is separated from the preparation chamber by a gate valve, and has a base pressure of $\sim 1\times 10^{-11}$ mbar. Samples are often stored in this chamber on a rotating carousel, due to the cleanliness and lower pressure. The samples can be loaded into the \ac{SPM}, which is kept at $\sim \SI{4.3}{K}$ by a cryostat of \acf{LHe} surrounded by a \acf{LN2} bath. With the sample inside the \ac{SPM}, molecules are thermally deposited on the cold sample using an \ac{OMBE} evaporator. At such low temperatures, the molecules are more stable on insulating \ch{NaCl} layers, and less diffusive, preventing aggregation and self-assembly \FIXME{citation}. A ceramic heater in the sample stage allows for annealing in the \ac{LT} chamber. For more information on the equipment in the chambers, including the evaporators, and the sample design, refer to \citep{cochrane2017single, roussy2016coupling}. 
+
+
 
 \subsection{Scanning probe with optical access}
 
+The imaging \ac{SPM} head is shown in \autoref{fig:expsetup:head}. The entire apparatus is suspended on damping springs, which can be clamped to the cryostat for sample transfer and faster cooling. The tip sits on a scanner, which is controlled by a coarse motor and piezoelectric motors. To begin an experiment, the tip is brought visually  to the sample using the coarse motor. An auto-approach function is then activated, taking a coarse step and extending the piezoelectric motor repeatedly until a tunnelling current is detected.
 
+\begin{figure} [h]
+    \centering
+    \includegraphics[width=2.5in]{pictures/head.png}
+    \caption{\FIXME{STM head.}}
+    \label{fig:expsetup:head}
+\end{figure}
 
+There are two ports for optical access to the \ac{SPM} head. A camera used for coarse tip approach occupies one, while a home-built lens tube used for \ac{STML} occupies the other. A planoconvex sapphire lens (Melles-Griot) sits inside the lens tube, about \SI{18}{mm} from the tip-sample junction, at an angle of \SI{25}{\degree} from the sample. This geometry allows for collection of photons in about 5\% of the half solid angle above the sample. In order to maximize photon collection, the lens is focused at the tip-sample junction for the Ag(111) substrate. The tip-sample junction is well approximated as a point source of light, and any shift from the lens focal point can broaden and weaken spectral features. When using the Au(111) thin film substrate, the height of the sample is different resulting in weaker \ac{STML} signals.
+% PXS-10.0-15.4-S
+
+The light from the lens then passes through ports in the two heat shields. These ports have KG5 \ac{IR} filters (SCHOTT) situated inside to reduce radiative heating of the \ac{SPM} head, and reduction in cryostat hold time. Photon emission from organic semiconductor are often in the visible to near-\ac{IR} range, so the filters were later replaced with a bandwidth filter (ThorLabs) that transmits wavelengths up to \SI{1000}{nm}. The transmission curves of the filters are shown in \autoref{fig:expsetup:windows}. To counteract increased thermal energy entering the heat shields, the inner heat shield port opening is reduced from \SI{20}{mm} to \SI{12}{mm} in diameter using a \SI{0.4}{mm} thick gold-plated BeCu plate. After replacement of the filter, no noticeable changes were seen in the cryogenic hold time. \emph{All \ac{STML} data was taken with the KG5 \ac{IR} filters in place}. Due to time constraints, \ac{STML} measurements were not repeated after the new window system was installed. The photons finally exit the \ac{LT} chamber through a Kodial vacuum viewport (VacGen), where they then enter an external optical setup mounted on the microscope. 
+
+\begin{figure} [h]
+    \centering
+    %\includegraphics[width=3in]{file}
+    \caption{\FIXME{Optical windows. With transmission curves.}}
+    \label{fig:expsetup:windows}
+\end{figure}
 
 
 \subsection{Tip preparation}
-In order to prepare 
 
+In this thesis, a platinum/iridium (Pt/Ir) and a silver (Ag) tip was used. Below is a description of the tip preparation. The tips were then clamped into a custom Omicron tip holder and transferred into the microscope. 
+
+The Pt/Ir tips were made by mechanically shearing a 0.38mm diameter wire. The Pt/Ir tip oxidizes relatively slowly and is relatively stiff, meaning it can be conditioned by poking into the metal substrates, resulting in a Ag or Au terminated Pt/Ir tip. 
+
+\begin{figure} [h]
+    \centering
+    \includegraphics[width=3in,angle=-90]{pictures/etching.jpg}
+    \caption{\FIXME{Caption for tip etching setup. Also include diagram for meniscus etching.}}
+    \label{fig:expsetup:etching}
+\end{figure}
+
+Ag is a material with a low lossyness, making it optimal for \ac{STML}. Due to the importance of tip geometry in enhancing the luminescence signal, Ag tips were electrochemically etched, ensuring a well-defined and sharp tip shape. The procedures for Ag tip preparation are adapted from \citep{roussy2016coupling, zhang2011fabrication}. 
+
+The etching setup is shown in \autoref{fig:expsetup:etching}. A 0.404mm diameter Ag wire was cleaned with acetone and isopropyl alcohol to give a clean etching surface. A teflon tubing covered the bottom $\sim$ \SI{3}{mm} of the wire to protect the region from chemical etching. The wire was then clamped and suspended in a solution of 50\% w/w citric acid in deionized water, with the meniscus about \SI{1.5}{mm} above the teflon protected region. A cylindrical mesh electrode was submerged into the solution with the wire in the centre to provide uniform etching on all sides of the wire. The wire was then etched using an alternating current voltage source at \SI{39}{V}, with the negative terminal connected to the wire, and the ground terminal connected to the mesh electrode. 
+
+Etching typically took around \SI{30}{min}. Surface tension effects and preferential etching at the meniscus produces a sharp metallic tip from the submerged portion of the wire, which drops into the solution, breaking electrical contact with the negative terminal and ending etching processes (\autoref{fig:expsetup:etching}). The tip was removed from the solution with the sharp side facing away from the meniscus, as the surface tension can bend the tip. The teflon tubing was removed, and the tip was rinsed in deionized water, followed by acetone and isopropyl alcohol. The tip was then examined with an optical microscope to ensure the tip was macroscopically sharp, and possessed a shiny metallic surface (\autoref{fig:expsetup:image-plasmon}). With the tip exposed to air, the Ag is susceptible to oxidation which can quench luminescence signals. If the tip passed inspection, it was immediately mounted and placed under vacuum in the microscope. We found the most success with Ag tips that were exposed to air for no longer than \SI{20}{min}.
+
+Due to the softness of Ag, it is extremely important that the tip does not crash into the surface. To prepare the tip for \ac{STML} experiments, the tip was repeated pulsed with voltages ranging from $5-\SI{10}{V}$ in order to remove residue and oxide from the tip. The shape of the tip was modified by piezo-controlled indentation into the metal substrate, ranging from 1$\SI{-10}{nm}$. With the optical setup aligned (discussed in the next section), the tip should demonstrate strong plasmonic emission at $\sim \SI{550}{nm}$ on Ag(111) when held at $V_b =\SI{3}{V}$ and $I_t = \SI{200}{pA}$ (\autoref{fig:expsetup:image-plasmon}).
+
+\begin{figure} [h]
+    \centering
+    %\includegraphics[width=3in,angle=-90]{pictures/etching.jpg}
+    \caption{\FIXME{show some tips with plasmons (2-3).}}
+    \label{fig:expsetup:image-plasmon}
+\end{figure}
+
+
+
+
+\subsection{External optical setup}
+
+Light collected by the lens inside the \ac{SPM} head exited the \ac{LT} chamber through a viewport. The external optical setup is shown in \autoref{fig:expsetup:optics}. A mirror mounted on the viewport directed the photons toward an optical table installed on the microscope. On the optical table, another mirror directed the light into a lens mounted on a \textit{xyz} micrometer stage, focusing the light into a spectrometer. The spectrometer energetically resolved the incoming photons, and the signal was detected with a \ac{LN2} cooled \ac{CCD}. 
+
+\begin{figure} [h]
+    \centering
+    %\includegraphics[width=3in]{file}
+    \caption{\FIXME{Optical windows. With transmission curves.}}
+    \label{fig:expsetup:optics}
+\end{figure}
+
+Before starting any experiment, the \ac{CCD} was calibrated for each spectrometer grating using a mountable Hg lamp. The provided software uses the characteristic emission peaks of Hg to correspond \ac{CCD} pixels to photon wavelength, with typical uncertainty values of $\pm$\SI{0.1}{nm}. In the presented work, two spectrometer gratings were used, with grating densities 300 gratings (gr)/mm and 600 gr/mm.\footnote{Some signal may be lost due to the imperfect reflectivity of the gratings. Efficiencies of the gratings at the regions of interest are around $60 - 70 \%$ \citep{princetongratings}} Higher grating density allows for higher resolution at the expense of spectral range. Once calibrated, all light sources in the room were covered or turned off and a background spectrum was taken. This background spectrum is subtracted from all experimental data, and accounts for thermal noise and stray light in the room.
+
+The optical setup was then aligned to ensure that emission from the tip-sample junction entered the spectrometer. To begin, the lens on the optical table was removed, and the tip was roughly approached to the sample. The face of the spectrometer was illuminated such that a shadow of the slit could be seen on the surface of the metallic substrate. The shadow of the slit and the tip-sample junction were aligned, either by moving the tip or changing the angle of the two mirrors. With the tip-sample junction and spectrometer slit aligned, the lens can be mounted onto the micrometer. Shining light in through the camera port, the light reflected off the tip-sample junction can be focused into the spectrometer slit by adjusting the position of the lens.
+
+All measurements were done with the largest slit opening (\SI{3}{mm}) to maximize the amount of light entering the spectrometer. This comes at a cost: spectral features that are sharper than a \ac{FWHM} of \SI{3}{nm} (for the 300 gr/mm) or \SI{1}{nm} (for the 600 gr/mm) are broadened and not resolved \citep{princetonslit}. 
 
 
 
@@ -43,9 +107,9 @@ Sample preparation involves cleaning the substrate, depositing the \ch{NaCl} fil
 
 \subsection*{Ag(111) substrate}
 
-A top hat silver crystal with (111) termination (Matek GmbH) is the primary substrate used for experiments. The crystal surface is cleaned by sputtering for \SI{20}{\minute} with ionized \ch{Ar} gas, with ionizing potential $\sim \SI{1}{kV}$ and preparation chamber pressures at $P_{prep} \approx 3 \times 10^{-6}$ mbar. The substrate is then annealed using an e-beam heater at $T_{sub} = \SI{420}{\celsius}$ for another \SI{20}{\minute}. This is repeated 2--3 times depending on the status of the crystal surface.
+A top hat silver crystal with (111) termination is the primary substrate used for experiments. The crystal surface is cleaned by sputtering for \SI{20}{\minute} using ionized \ch{Ar} gas, with ionizing potential $\sim \SI{1}{kV}$ and preparation chamber pressures at $P_{prep} \approx 3 \times 10^{-6}$ mbar. The substrate is then annealed using an e-beam heater at $T_{sub} = \SI{420}{\celsius}$ for another \SI{20}{\minute}. This is repeated 2--3 times depending on the status of the crystal surface.
 
-A typical scan of a clean Ag(111) surface is seen in \autoref{fig:expsetup:Ag111}. When scanned with a sharp metallic tip, step heights are typically $\sim\SI{2}{\angstrom}$, and the \ac{STS} point spectra has a ``kink" at \SI{-67}{mV}. This corresponds to a step in the density of states, approximated by $dI/dV$, which is a result of the surface state of Ag(111) \citep{hovel2001modification}. 
+A typical scan of a clean Ag(111) surface is seen in \autoref{fig:expsetup:Ag111}. When scanned with a sharp metallic tip, step heights are typically $\sim\SI{2}{\angstrom}$, and the \ac{STS} point spectra has a ``kink" at \SI{-67}{mV}. This corresponds to a step in the density of states, approximated by $dI/dV$, which is a result of the surface state of Ag(111) \citep{hovel2001modification}.
 
 \begin{figure} [h]
     \centering
@@ -55,8 +119,7 @@ A typical scan of a clean Ag(111) surface is seen in \autoref{fig:expsetup:Ag111
 \end{figure}
 
 
-
-\subsection*{Au(111) on Mica}
+\subsection*{Au(111) on Mica substrate}
 
 As an alternate substrate, a thin film of (111) terminated gold on mica was used. The cleaning is similar to the procedures for Ag(111), but with sputtering potential $\sim \SI{0.75}{kV}$, and annealing temperature $T_{sub} = \SI{345}{\celsius}$.
 
@@ -94,19 +157,57 @@ NaCl was thermally deposited using a homebuilt Knudsen cell. The thickness of th
 
 \subsection*{Molecule deposition}
 
+Five different organic semiconducting molecules were used in our experiments (\autoref{fig:expsetup:molecules}). All molecules were deposited on a cold sample in the \ac{LT} chamber, with substrate temperature between \SI{4.3}{K} and \SI{4.5}{K}. The deposition parameters are summarized in \autoref{tab:expsetup:mol-dep}. 
+
+\begin{figure} [h]
+    \centering
+    %\includegraphics[width=3in]{file}
+    \caption{\FIXME{Chemical structures of all molecules}}
+    \label{fig:expsetup:molecules}
+\end{figure}
+
+The \ac{HMAT} derivative molecules were synthesized by C. Tonge in the Hudson group in the chemistry department of UBC. To obtain the deposition temperature for these molecules, thermogravimetric analysis was performed to give an approximate temperature at which the molecule begins to degrade. The molecules were then deposited onto the sample at approximately \SI{50}{\celsius} below the degradation temperature, and the sample scanned for presence of the molecules. The deposition temperature was ramped up in \SI{5}{\celsius} increments until the molecule was found on the surface.
+
+\begin{table} [h]
+\begin{center}
+    \begin{tabular}{|c|c|c|} 
+    \hline
+        Molecule  &  Deposition temperature (\SI{}{\celsius}) &  Time \\
+        \hline
+         PTCDA    &     325   & $\sim \SI{30}{s} $  \\
+          ZnPc  &      370  & $\sim \SI{30}{s}$   \\
+     \ch{F8ZnPc} &     370 & $\sim \SI{30}{s}$ \\
+        HMAT-O   &    160  &    \SI{5}{\minute}\\
+        HMAT-HZ  &    330  & \SI{10}{\minute}  \\
+        \hline
+    \end{tabular}
+    \caption{}
+    \label{tab:expsetup:mol-dep}
+    \end{center}
+\end{table}
+
+
+Unfortunately, the \ac{HMAT} derivatives were not stable at the sublimation temperature. Repeated degassing to remove impurities in the crucible resulted in continued deposition of molecular fragments. In order to preserve the integrity of the molecules, the deposition temperature was lowered, and the deposition time increased to the order of minutes.
+
+Deposition times presented in \autoref{tab:expsetup:mol-dep} vary depending on the desired coverage. The times listed are for sparse coverages. The deposition may be repeated multiple times until coverage is sufficient. 
 
 
 
-\section{Optical setup}
 
 
 
 
 
-\section{Density functional theory methods}
 
-Molecular orbital and energy level of free molecules are calculated using \ac{DFT} package \emph{Gaussian 16} \citep{frisch2016gaussian}. For 
-\citep{rdkit}
 
+
+
+\section{Simulation methods}
+
+\Acf{DFT} calculations were performed for the molecules, giving the molecular orbitals and energy levels of the isolated molecules. The results can be qualitatively compared to the experimental results. First, the chemical structures were drawn with the \textit{Avogadro} software \citep{hanwell2012avogadro}, which generated a file with the \ac{3D} coordinates of the atoms. As organic molecules can be flexible, different conformations were generated using the knowledge-based \ac{ETKDG} algorithm \citep{riniker2015better} built into the Python package \textit{RDKit} \citep{rdkit}. The \ac{UFF} \citep{rappe1992uff} was used to calculate the energy of the conformation, and the conformation with the lowest energy was selected for \ac{DFT} calculations. Due to the many aromatic rings in the molecules we studied, the possible conformations were limited to planar structures, comparable to the planar configuration of the molecules on our metallic substrate.
+
+Molecular orbital and energy level of free molecules were calculated using \ac{DFT} \emph{Gaussian 16} software package \citep{frisch2016gaussian}. The \ac{B3LYP} functional \citep{lee1988development,becke1993becke} and the 6-31G(d) \citep{frisch1984self} basis set was used for all calculations. A geometry optimization was performed on the conformer generated from molecular dynamics until the average force on all atoms were below $3\times 10^{-4}$ Ha/$r_{bohr}$. Finally, electronic structures of the fully relaxed molecules were calculated. The molecular orbitals were plotted with \textit{Avogadro}, while the energy levels were extracted with the \textit{Multiwfn} software \citep{lu2012multiwfn}. 
+
+It is important to reiterate that the \ac{DFT} results can only be qualitatively compared with the experimental results. The \ac{DFT} calculations on the isolated molecules do not account for the interactions between the substrate and the molecule, such as through hybridization or by van Der Waals forces. Additionally, geometrical changes to the molecule occur when they are adsorpted onto a surface, and a variety of stable conformations are possible.
 
 %%%%%
