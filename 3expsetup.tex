@@ -70,7 +70,7 @@ The etching setup is shown in \autoref{fig:expsetup:etching}. A 0.404mm diameter
 
 Etching typically took around \SI{30}{min}. Surface tension effects and preferential etching at the meniscus produces a sharp metallic tip from the submerged portion of the wire, which drops into the solution, breaking electrical contact with the negative terminal and ending etching processes (\autoref{fig:expsetup:etching}). The tip was removed from the solution with the sharp side facing away from the meniscus, as the surface tension can bend the tip. The teflon tubing was removed, and the tip was rinsed in deionized water, followed by acetone and isopropyl alcohol. The tip was then examined with an optical microscope to ensure the tip was macroscopically sharp, and possessed a shiny metallic surface (\autoref{fig:expsetup:image-plasmon}). With the tip exposed to air, the Ag is susceptible to oxidation which can quench luminescence signals. If the tip passed inspection, it was immediately mounted and placed under vacuum in the microscope. We found the most success with Ag tips that were exposed to air for no longer than \SI{20}{min}.
 
-Due to the softness of Ag, it is extremely important that the tip does not crash into the surface. To prepare the tip for \ac{STML} experiments, the tip was repeated pulsed with voltages ranging from $5-\SI{10}{V}$ in order to remove residue and oxide from the tip. The shape of the tip was modified by piezo-controlled indentation into the metal substrate, ranging from 1$\SI{-10}{nm}$. With the optical setup aligned (discussed in the next section), the tip should demonstrate strong plasmonic emission at $\sim \SI{550}{nm}$ on Ag(111) when held at $V_b =\SI{3}{V}$ and $I_t = \SI{200}{pA}$ (\autoref{fig:expsetup:image-plasmon}).
+Due to the softness of Ag, it is extremely important that the tip does not crash into the surface. To prepare the tip for \ac{STML} experiments, the tip was repeatedly pulsed with voltages ranging from $5-\SI{10}{V}$ in order to remove residue and oxide from the tip. The shape of the tip was modified by piezo-controlled indentation into the metal substrate, ranging from 1$\SI{-10}{nm}$. With the optical setup aligned (discussed in the next section), the tip should demonstrate strong plasmonic emission at $\sim \SI{550}{nm}$ on Ag(111) when held at $V_b =\SI{3}{V}$ and $I_t = \SI{200}{pA}$ (\autoref{fig:expsetup:image-plasmon}).
 
 \begin{figure} [h]
     \centering
@@ -181,7 +181,7 @@ The \ac{HMAT} derivative molecules were synthesized by C. Tonge in the Hudson gr
         HMAT-HZ  &    330  & \SI{10}{\minute}  \\
         \hline
     \end{tabular}
-    \caption{}
+    \caption{Deposition times presented vary depending on the desired coverage. The times listed are for sparse coverages. The deposition may be repeated multiple times until coverage is sufficient. }
     \label{tab:expsetup:mol-dep}
     \end{center}
 \end{table}
@@ -189,7 +189,6 @@ The \ac{HMAT} derivative molecules were synthesized by C. Tonge in the Hudson gr
 
 Unfortunately, the \ac{HMAT} derivatives were not stable at the sublimation temperature. Repeated degassing to remove impurities in the crucible resulted in continued deposition of molecular fragments. In order to preserve the integrity of the molecules, the deposition temperature was lowered, and the deposition time increased to the order of minutes.
 
-Deposition times presented in \autoref{tab:expsetup:mol-dep} vary depending on the desired coverage. The times listed are for sparse coverages. The deposition may be repeated multiple times until coverage is sufficient. 
 
 
 
@@ -204,7 +203,7 @@ Deposition times presented in \autoref{tab:expsetup:mol-dep} vary depending on t
 
 \section{Simulation methods}
 
-\Acf{DFT} calculations were performed for the molecules, giving the molecular orbitals and energy levels of the isolated molecules. The results can be qualitatively compared to the experimental results. First, the chemical structures were drawn with the \textit{Avogadro} software \citep{hanwell2012avogadro}, which generated a file with the \ac{3D} coordinates of the atoms. As organic molecules can be flexible, different conformations were generated using the knowledge-based \ac{ETKDG} algorithm \citep{riniker2015better} built into the Python package \textit{RDKit} \citep{rdkit}. The \ac{UFF} \citep{rappe1992uff} was used to calculate the energy of the conformation, and the conformation with the lowest energy was selected for \ac{DFT} calculations. Due to the many aromatic rings in the molecules we studied, the possible conformations were limited to planar structures, comparable to the planar configuration of the molecules on our metallic substrate.
+\Acf{DFT} calculations were performed for the molecules, giving the molecular orbitals and energy levels of the isolated molecules. The results can be qualitatively compared to the experimental results. First, the chemical structures were drawn with the \textit{Avogadro} software \citep{hanwell2012avogadro}, which generated a file with the \ac{3D} coordinates of the atoms. As organic molecules can be flexible, different conformations were generated using the knowledge-based \ac{ETKDG} algorithm \citep{riniker2015better} built into the Python package \textit{RDKit} \citep{rdkit}. The \ac{UFF} \citep{rappe1992uff} was used to calculate the energy of the conformations, and the conformation with the lowest energy was selected for \ac{DFT} calculations. Due to the many aromatic rings in the molecules we studied, the possible conformations were limited to planar structures, comparable to the planar configuration of the molecules on our metallic substrate.
 
 Molecular orbital and energy level of free molecules were calculated using \ac{DFT} \emph{Gaussian 16} software package \citep{frisch2016gaussian}. The \ac{B3LYP} functional \citep{lee1988development,becke1993becke} and the 6-31G(d) \citep{frisch1984self} basis set was used for all calculations. A geometry optimization was performed on the conformer generated from molecular dynamics until the average force on all atoms were below $3\times 10^{-4}$ Ha/$r_{bohr}$. Finally, electronic structures of the fully relaxed molecules were calculated. The molecular orbitals were plotted with \textit{Avogadro}, while the energy levels were extracted with the \textit{Multiwfn} software \citep{lu2012multiwfn}. 
 
