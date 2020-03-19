@@ -93,9 +93,9 @@ Light collected by the lens inside the \ac{SPM} head exited the \ac{LT} chamber 
     \label{fig:expsetup:optics}
 \end{figure}
 
-Before starting any experiment, the \ac{CCD} was calibrated for each spectrometer grating using a mountable Hg lamp. The provided software uses the characteristic emission peaks of Hg to correspond \ac{CCD} pixels to photon wavelength, with typical uncertainty values of $\pm$\SI{0.1}{nm}. In the presented work, two spectrometer gratings were used, with grating densities 300 gratings (gr)/mm and 600 gr/mm.\footnote{Some signal may be lost due to the imperfect reflectivity of the gratings. Efficiencies of the gratings at the regions of interest are around $60 - 70 \%$ \citep{princetongratings}} Higher grating density allows for higher resolution at the expense of spectral range. Once calibrated, all light sources in the room were covered or turned off and a background spectrum was taken. This background spectrum is subtracted from all experimental data, and accounts for thermal noise and stray light in the room.
+Before starting any experiment, the \ac{CCD} was calibrated for each spectrometer grating using a mountable Hg lamp. The provided software uses the characteristic emission peaks of Hg to correspond \ac{CCD} pixels to photon wavelength, with typical uncertainty values of $\pm$\SI{0.1}{nm}. In the presented work, two spectrometer gratings were used, with grating densities 300 gratings (gr)/mm and 600 gr/mm.\footnote{Some signal may be lost due to the imperfect reflectivity of the gratings. Efficiencies of the gratings at the regions of interest are around $70 - 80 \%$ \citep{princetongratings}} Higher grating density allows for higher resolution at the expense of spectral range. Once calibrated, all light sources in the room were covered or turned off and a background spectrum was taken. This background spectrum is subtracted from all experimental data, and accounts for thermal noise and stray light in the room.
 
-The optical setup was then aligned to ensure that emission from the tip-sample junction entered the spectrometer. To begin, the lens on the optical table was removed, and the tip was roughly approached to the sample. The face of the spectrometer was illuminated such that a shadow of the slit could be seen on the surface of the metallic substrate. The shadow of the slit and the tip-sample junction were aligned, either by moving the tip or changing the angle of the two mirrors. With the tip-sample junction and spectrometer slit aligned, the lens can be mounted onto the micrometer. Shining light in through the camera port, the light reflected off the tip-sample junction can be focused into the spectrometer slit by adjusting the position of the lens.
+The optical setup was then aligned to ensure that emission from the tip-sample junction entered the spectrometer. To begin, the lens on the optical table was removed, and the tip was coarse approached to the sample. The face of the spectrometer was illuminated such that a shadow of the slit could be seen on the surface of the metallic substrate. The shadow of the slit and the tip-sample junction were aligned, either by moving the tip or changing the angle of the two mirrors. With the tip-sample junction and spectrometer slit aligned, the lens can be mounted onto the micrometer stage. Shining light in through the camera port, the light reflected off the tip-sample junction can be focused into the spectrometer slit by adjusting the position of the lens.
 
 All measurements were done with the largest slit opening (\SI{3}{mm}) to maximize the amount of light entering the spectrometer. This comes at a cost: spectral features that are sharper than a \ac{FWHM} of \SI{3}{nm} (for the 300 gr/mm) or \SI{1}{nm} (for the 600 gr/mm) are broadened and not resolved \citep{princetonslit}. 
 
@@ -135,9 +135,9 @@ An \ac{STM} image of the Au(111) thin film (\autoref{fig:expsetup:Au111}) shows 
 
 \subsection*{NaCl deposition}
 
-Layers of \ch{NaCl} were deposited onto the metallic substrates for all experiments discussed in this thesis. The film grows with (100) surface. This insulating film partially decouples the molecule from the metallic substrate, while still allowing for tunnelling between the tip and sample \FIXME{cite the decoupling paper}. The decoupling is also necessary for \ac{STML} experiments, as emission from excitons in the molecule are quenched by electronic pathways between the molecule and the metal substrate.
+Layers of \ch{NaCl} were deposited onto the metallic substrates for all experiments discussed in this thesis. The film grows with (100) surface. This insulating film partially decouples the molecule from the metallic substrate, while still allowing for tunnelling between the tip and sample \citep{repp2005molecules}. The decoupling is also necessary for \ac{STML} experiments, as emission from excitons in the molecule are quenched by electronic pathways between the molecule and the metal substrate.
 
-NaCl was thermally deposited using a homebuilt Knudsen cell. The thickness of the film can be controlled by deposition temperature, time, and substrate temperature. For our experiments, we were interested in both bilayer and trilayer NaCl. With the substrate held at $T_{sub} = \SI{100}{\celsius}$, NaCl was deposited for \SI{12}{\minute} with deposition temperature at approximately \SI{550}{\celsius}. 
+NaCl was thermally deposited using a homebuilt Knudsen cell. The thickness of the film can be controlled by deposition temperature, time, and substrate temperature. With the substrate held at $T_{sub} = \SI{100}{\celsius}$, NaCl was deposited for \SI{12}{\minute} with deposition temperature at approximately \SI{550}{\celsius}. 
 
 \begin{figure} [h]
     \centering
@@ -146,7 +146,9 @@ NaCl was thermally deposited using a homebuilt Knudsen cell. The thickness of th
     \label{fig:expsetup:2-3NaCl}
 \end{figure}
 
-\ac{STM} of bilayer and trilayer NaCl on Ag(111) is shown in \autoref{fig:expsetup:2-3NaCl}, seen as square shaped terraces. The step height of bilayer NaCl is around \SI{3}{\angstrom}, while trilayer is at \SI{4.5}{\angstrom}. The presence of the NaCl layers shifts the onset of the surface state of the metallic substrates (\autoref{fig:expsetup:NaClstate}). This signature in the \ac{STS} spectra is useful for determining whether a surface is metallic or insulating NaCl.
+\ac{STM} of bilayer and trilayer (2-\acf{ML} and 3\ac{ML}) NaCl on Ag(111) is shown in \autoref{fig:expsetup:2-3NaCl}, seen as rectangular terraces. The step height of 2\ac{ML} NaCl is around \SI{3}{\angstrom}, while 3\ac{ML} is at \SI{4.5}{\angstrom}. Experiments were carried out on the bilayer (2\ac{ML}) for better molecule and tip stability.
+
+The presence of the NaCl layers shifts the onset of the surface state of the metallic substrates (\autoref{fig:expsetup:NaClstate}). This signature in the \ac{STS} spectra is useful for determining whether a surface is metallic or insulating NaCl.
 
 \begin{figure} [h]
     \centering
@@ -172,12 +174,13 @@ The \ac{HMAT} derivative molecules were synthesized by C. Tonge in the Hudson gr
 \begin{center}
     \begin{tabular}{|c|c|c|} 
     \hline
-        Molecule  &  Deposition temperature (\SI{}{\celsius}) &  Time \\
+        Molecule  &  \begin{tabular}[x]{@{}c@{}}Deposition\\temperature (\SI{}{\celsius})\end{tabular}   &  Time \\
         \hline
          PTCDA    &     325   & $\sim \SI{30}{s} $  \\
           ZnPc  &      370  & $\sim \SI{30}{s}$   \\
      \ch{F8ZnPc} &     370 & $\sim \SI{30}{s}$ \\
         HMAT-O   &    160  &    \SI{5}{\minute}\\
+        HMAT-TZ  &    330   &  \SI{5}{\minute}\\
         HMAT-HZ  &    330  & \SI{10}{\minute}  \\
         \hline
     \end{tabular}
@@ -205,8 +208,8 @@ Unfortunately, the \ac{HMAT} derivatives were not stable at the sublimation temp
 
 \Acf{DFT} calculations were performed for the molecules, giving the molecular orbitals and energy levels of the isolated molecules. The results can be qualitatively compared to the experimental results. First, the chemical structures were drawn with the \textit{Avogadro} software \citep{hanwell2012avogadro}, which generated a file with the \ac{3D} coordinates of the atoms. As organic molecules can be flexible, different conformations were generated using the knowledge-based \ac{ETKDG} algorithm \citep{riniker2015better} built into the Python package \textit{RDKit} \citep{rdkit}. The \ac{UFF} \citep{rappe1992uff} was used to calculate the energy of the conformations, and the conformation with the lowest energy was selected for \ac{DFT} calculations. Due to the many aromatic rings in the molecules we studied, the possible conformations were limited to planar structures, comparable to the planar configuration of the molecules on our metallic substrate.
 
-Molecular orbital and energy level of free molecules were calculated using \ac{DFT} \emph{Gaussian 16} software package \citep{frisch2016gaussian}. The \ac{B3LYP} functional \citep{lee1988development,becke1993becke} and the 6-31G(d) \citep{frisch1984self} basis set was used for all calculations. A geometry optimization was performed on the conformer generated from molecular dynamics until the average force on all atoms were below $3\times 10^{-4}$ Ha/$r_{bohr}$. Finally, electronic structures of the fully relaxed molecules were calculated. The molecular orbitals were plotted with \textit{Avogadro}, while the energy levels were extracted with the \textit{Multiwfn} software \citep{lu2012multiwfn}. 
+Molecular orbitals and energy levels of free molecules were calculated using \ac{DFT} \emph{Gaussian 16} software package \citep{frisch2016gaussian}. The \ac{B3LYP} functional \citep{lee1988development,becke1993becke} and the 6-31G(d) \citep{frisch1984self} basis set was used for all calculations. A geometry optimization was performed on the conformer generated from molecular dynamics until the average force on all atoms were below $3\times 10^{-4}$ Ha/$r_{bohr}$. Finally, electronic structures of the fully relaxed molecules were calculated. The molecular orbitals were plotted with \textit{Avogadro}, while the energy levels were extracted with the \textit{Multiwfn} software \citep{lu2012multiwfn}. 
 
-It is important to reiterate that the \ac{DFT} results can only be qualitatively compared with the experimental results. The \ac{DFT} calculations on the isolated molecules do not account for the interactions between the substrate and the molecule, such as through hybridization or by van Der Waals forces. Additionally, geometrical changes to the molecule occur when they are adsorpted onto a surface, and a variety of stable conformations are possible.
+It is important to reiterate that the \ac{DFT} results can only be qualitatively compared with the experimental results. The \ac{DFT} calculations on the isolated molecules do not account for the interactions between the substrate and the molecule such as hybridization or by Van der Waals forces. Additionally, geometrical changes to the molecule occur when they are adsorpted onto a surface, and a variety of stable conformations are possible.
 
 %%%%%
