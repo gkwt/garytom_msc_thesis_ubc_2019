@@ -4,7 +4,7 @@
 \chapter{Luminescence from Organic Molecules}
 \label{ch:opv}
 
-Prior to the work done in this thesis, \ac{STML} from a single organic molecule has not yet been detected on our system. To optimize and ensure the viability of the experimental setup, \ac{STML} was performed on prototypical organic semiconducting molecules PTCDA \citep{Rzeznicka2011, Kimura2019} and ZnPc \citep{Zhang2016, Doppagne2017, Zhang2017, Imada2016, Doppagne2018, Miwa2019}, both of which have had successful reports of \ac{STML} experiments. Fluorination of phthalocyanine molecules have previously been demonstrated as a method to tune the electronic and optical energies of the molecule in bulk \citep{schwarze2016band, warren2019controlling}. Further experiments were carried out on \ch{F8ZnPc} to explore the effects of fluorination on the structural, electronic and optical properties of ZnPc.
+Prior to the work done in this thesis, \ac{STML} from a single organic molecule has not yet been detected on our system. To optimize and ensure the viability of the experimental setup, \ac{STML} was performed on prototypical organic semiconducting molecules \ac{PTCDA} \citep{Rzeznicka2011, Kimura2019} and \ac{ZnPc} \citep{Zhang2016, Doppagne2017, Zhang2017, Imada2016, Doppagne2018, Miwa2019}, both of which have had successful reports of \ac{STML} experiments. Fluorination of phthalocyanine molecules have previously been demonstrated as a method to tune the electronic and optical energies of the molecule in bulk \citep{schwarze2016band, warren2019controlling}. Further experiments were carried out on \ch{F8ZnPc} to explore the effects of fluorination on the structural, electronic and optical properties of ZnPc.
 
 
 \section{Plasmon emission from substrates}
@@ -36,16 +36,49 @@ Thicker layers of NaCl further dissociate the molecule from the metallic substra
 
 
 
-\section{ of ZnPc and PTCDA}
+\section{Study of {ZnPc}}
+
+\ac{ZnPc} is a relatively planar organic semiconducting molecule that can be thermally deposited, making it optimal for \ac{SPM} study. Because of previous reports of \ac{STML} on ZnPc, this molecule was used to test the \ac{STML} capabilities of our system. 
+
+The structure of the ZnPc is shown in \autoref{fig:opv:znpc-stm}. The substrate was (2ML)NaCl/Au(111) thin film, and the tip used was the Pt/Ir tip dipped in gold. At biases higher than \SI{1}{V}, the ZnPc molecule rotates to give a 16-lobed structure. The non-rotating molecule has an 8-lobed structure, which could be seen if the molecules were ``anchored" by some defect or step edge, or was dimerized to another molecule.  
+
+\begin{figure} [h]
+    \centering
+    %\includegraphics[width=3in]{file}
+    \caption{\FIXME{Show stm of ZnPc (-1V, 1.0, 2.0), also with dimerize }}
+    \label{fig:opv:znpc-stm}
+\end{figure}
+
+The electronic structure was then probed using \ac{STS}. The \ac{LDOS} along with the molecular orbitals at the resonances are shown in \autoref{fig:opv:znpc-sts}.
+
+\begin{figure} [h]
+    \centering
+    %\includegraphics[width=3in]{file}
+    \caption{\FIXME{Show sts of ZnPc on Au(111)}}
+    \label{fig:opv:znpc-sts}
+\end{figure}
+
+To maximize \ac{STML} signal, ZnPc was deposited on (2ML)NaCl/Ag(111) and probed with the Ag tip. Previous reports of ZnPc on this substrate show that the electronic states of the molecule do not change much in structure, and only experience a rigid shift of $\approx \SI{-1}{eV}$ in energy when compared to (2ML)NaCl/Au(111), due to the lower work function of (2ML)NaCl/Ag(111) \citep{Doppagne2017,Doppagne2018}. With an optimized Ag tip, photoluminescence was detected on the molecule, with an emission peak at \SI{630}{nm} or \SI{1.96}{eV} (\autoref{fig:opv:znpc-stml}).
+
+
+\begin{figure} [h]
+    \centering
+    \includegraphics[width=3in]{pictures/stml_znpc_ag111.png}
+    \caption{\FIXME{Show sts of ZnPc on Au(111), show inset with the molecule on surface}}
+    \label{fig:opv:znpc-stml}
+\end{figure}
+
+\subsection{Discussion}
+
+
+\section{Study of {PTCDA}}
+
+The next system studied was the \ac{PTCDA} molecule on (2ML)NaCl/Au(111). As discussed before, the Au(111) thin film sample is out of focus of the in-situ lens, resulting in weaker signals. However, \ac{PTCDA} is highly electronegative, and the (2ML)NaCl/Ag(111) substrate has a low work function, resulting in a charged PTCDA \citep{cochrane2017single,cochrane2018molecularly}. By using Au(111), which has a higher work function, as the metallic substrate, the PTCDA molecule was not charged on the surface, giving a simpler system to probe. Additionally, previous preliminary work in our group has demonstrated luminescence quenching on the PTCDA/(2ML)NaCl/Ag(111) system \citep{roussy2016coupling}, although a recent publication has shown otherwise \citep{Kimura2019}.
 
 
 
 
-
-
-
-
-\section{\ac{STML} of fluorinated \ch{ZnPc}}
+\section{Study of \ch{F8ZnPc}}
 
 
 
