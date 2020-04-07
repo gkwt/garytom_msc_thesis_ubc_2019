@@ -41,31 +41,31 @@ The imaging \ac{SPM} head is shown in \autoref{fig:expsetup:head}. The entire ap
 There are two ports for optical access to the \ac{SPM} head. A camera used for coarse tip approach occupies one, while a home-built lens tube used for \ac{STML} occupies the other. A planoconvex sapphire lens (Melles-Griot) sits inside the lens tube, about \SI{18}{mm} from the tip-sample junction, at an angle of \SI{25}{\degree} from the sample. This geometry allows for collection of photons in about 5\% of the half solid angle above the sample. In order to maximize photon collection, the lens is focused at the tip-sample junction for the Ag(111) substrate. The tip-sample junction is well approximated as a point source of light, and any shift from the lens focal point can broaden and weaken spectral features. When using the Au(111) thin film substrate, the height of the sample is different resulting in weaker \ac{STML} signals.
 % PXS-10.0-15.4-S
 
-The light from the lens then passes through ports in the two heat shields. These ports have KG5 \ac{IR} filters (SCHOTT) situated inside to reduce radiative heating of the \ac{SPM} head, and reduction in cryostat hold time. Photon emission from organic semiconductor are often in the visible to near-\ac{IR} range, so the filters were later replaced with a bandwidth filter (ThorLabs) that transmits wavelengths up to \SI{1000}{nm}. The transmission curves of the filters are shown in \autoref{fig:expsetup:windows}. To counteract increased thermal energy entering the heat shields, the inner heat shield port opening is reduced from \SI{20}{mm} to \SI{12}{mm} in diameter using a \SI{0.4}{mm} thick gold-plated BeCu plate. After replacement of the filter, no noticeable changes were seen in the cryogenic hold time. \emph{All \ac{STML} data was taken with the KG5 \ac{IR} filters in place}. Due to time constraints, \ac{STML} measurements were not repeated after the new window system was installed. The photons finally exit the \ac{LT} chamber through a Kodial vacuum viewport (VacGen), where they then enter an external optical setup mounted on the microscope. 
-
+The light from the lens then passes through ports in the two heat shields. These ports have KG5 \ac{IR} filters (SCHOTT) situated inside to reduce radiative heating of the \ac{SPM} head, and reduction in cryostat hold time. Photon emission from organic semiconductor are often in the visible to near-\ac{IR} range, so the filters were later replaced with a WG41050 bandpass filter  (ThorLabs) that transmits wavelengths up to \SI{1000}{nm}. The transmission curves of the filters are shown in \autoref{fig:expsetup:windows}. To counteract increased thermal energy entering the heat shields, the inner heat shield port opening was reduced from \SI{20}{mm} to \SI{12}{mm} in diameter using a \SI{0.4}{mm} thick gold-plated BeCu plate. After replacement of the filter, no noticeable changes were seen in the cryogenic hold time. \emph{All \ac{STML} data was taken with the KG5 \ac{IR} filters in place}. Due to time constraints, \ac{STML} measurements were not repeated after the new window system was installed. The photons finally exit the \ac{LT} chamber through a Kodial vacuum viewport (VacGen), where they then enter an external optical setup mounted on the microscope. 
 \begin{figure} [h]
     \centering
-    \begin{subfigure}{.52\textwidth}
+    \begin{subfigure}{.5\textwidth}
         \centering
         \includegraphics[width=\textwidth]{pictures/windows_filters.jpg}
-        \caption{this is another caption}
+        \captionsetup{width=0.9\textwidth}
+        \caption{\emph{Left:} KG5 IR filter with \SI{20}{mm} opening cover. \emph{Right:} WG41050 bandpass filter with \SI{12}{mm} opening cover. }
     \end{subfigure}
     \hfill
     \begin{tabular}{c}
-        \begin{subfigure}{.43\textwidth}
+        \begin{subfigure}{.44\textwidth}
             \centering
             \includegraphics[width=\textwidth]{pictures/KG5_trans.jpg}
-            \caption{this is a caption}
+            \caption{KG5 transmission curve.}
         \end{subfigure}
       \\
-        \begin{subfigure}{.43\textwidth}
+        \begin{subfigure}{.44\textwidth}
             \centering
             \includegraphics[width=\textwidth]{pictures/UVFS_trans.jpg}
-            \caption{this is a caption}
+            \caption{WG41050 transmission curve.}
         \end{subfigure}
     \end{tabular}
     
-    \caption{\FIXME{Optical windows. With transmission curves.}}
+    \caption{Details of filters and windows. \textbf{(a)} IR and bandpass filters and respective windows. The transmission curves shown in \textbf{(b)} and \textbf{(c)}.}
     \label{fig:expsetup:windows}
 \end{figure}
 

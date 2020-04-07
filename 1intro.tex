@@ -16,10 +16,38 @@ In the midst of the rapid development of silicon-based and inorganic semiconduct
 
 The major advantage of organic semiconductors when compared to their inorganic counterparts is their relative ease of processing. Organic molecules can be thermally deposited or solution processed, allowing for cost-effective device fabrication \citep{yip2012recent,huang2019organic}. Additionally, by drawing from a suite of chemical synthesis techniques, new molecules can be created from Earth-abundant organic elements, and engineered with different functional groups to have the desired optical, electronic, and structural properties. This versatility allows for tunable light absorption and emission, transparency, and mechanical flexibility, which have already been applied to niche commercial products (\autoref{fig:intro:applications}). 
 
-\begin{figure}
+\begin{figure}[h]
     \centering
-    \includegraphics{}
-    \caption{\FIXME{Add images of applications of organic semiconductors.}}
+    
+    \begin{subfigure}[t]{0.43\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{pictures/transparent_solar.PNG}
+        \caption{}
+    \end{subfigure}
+    \hspace{0.5cm}
+    \begin{subfigure}[t]{.43\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pictures/flexible_opv.jpg}
+        \caption{}
+    \end{subfigure}
+    
+    
+    \vspace{0.2cm}
+    
+    \begin{subfigure}[t]{.43\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pictures/folding_oled_fold.PNG}
+        \caption{}
+    \end{subfigure}
+    \hspace{0.5cm}
+    \begin{subfigure}[t]{.43\textwidth}
+        \centering
+        \includegraphics[width=0.95\textwidth]{pictures/biological_oled.PNG}
+        \caption{}
+    \end{subfigure}
+    
+    
+    \caption[Various applications of organic semiconducting molecules. \textbf{(a)} Organic solar cell that absorbs in the infrared range, making it transparent to visible light. \textbf{(b)} Flexible thin film {OPV} that are fabricated in large rolls (Infinity PV). \textbf{(c)} Foldable display made possible by flexible {OLED} displays (Samsung Electronics). \textbf{(d)} Biological imaging application of {OLED} molecules attached to nanoparticles.]{Various applications of organic semiconducting molecules. \textbf{(a)} Organic solar cell that absorbs in the infrared range, making it transparent to visible light (\citeauthor{zhao2014near} \citep{zhao2014near}). \textbf{(b)} Flexible thin film {OPV} that are fabricated in large rolls (Infinity PV \citep{jacobyInfinityPV}). \textbf{(c)} Foldable display made possible by flexible {OLED} displays (Samsung Electronics \citep{galaxyFold}). \textbf{(d)} Biological imaging application of {OLED} molecules attached to nanoparticles \citep{crossley2017post}.  }
     \label{fig:intro:applications}
 \end{figure}
 
@@ -46,8 +74,8 @@ Due to the low dielectric constant in organic materials, electric fields between
 
 \begin{figure}[h]
     \centering
-    \includegraphics{}
-    \caption{\FIXME{Add energy diagram of excitons.}}
+    \includegraphics[width=0.7\textwidth]{pictures/exciton_energy.png}
+    \caption{Schematic of energy levels involved in photoexcitation in organic semiconducting molecules. The ionization potential, electron affinity, and band gap of the molecule are labelled in the diagram. The optical gap, and exciton binding energy for a photoexcited electron are indicated for a typical exciton.}
     \label{fig:intro:exciton}
 \end{figure}
 
@@ -55,19 +83,19 @@ Typically, \ac{OPV} systems are composed of two species of organic semiconductin
 
 \begin{figure}[h]
     \centering
-    \includegraphics{}
-    \caption{\FIXME{Add energy diagram of CT state.}}
+    \includegraphics[width=0.8\textwidth]{pictures/CT_energy.png}
+    \caption{Schemtic demonstrating the formation of the charge transfer state. \textbf{(1)} An incoming photon excites an electron in the donor system. The exciton forms due to Coulomb force between the electron and hole. \textbf{(2)} Before recombination occurs, the exciton diffuses to the heterojunction. The charge transfer exciton form. \textbf{(3)} With the exciton delocalized, dissociation occurs and the charge is transferred to the acceptor.}
     \label{fig:intro:ct}
 \end{figure}
 
 Excitons in \ac{OPV} materials typically have diffusion lengths of 1\SI{-30}{nm} \citep{proctor2013charge}, and have lifetimes ranging from attoseconds to microseconds \citep{tamai2015exciton}. There is a probability of exciton recombination, in which the excited electron drops in energy and re-emits the $E_{opt}$ as light, if the exciton is unable to diffuse to an interface to form the \ac{CT} state. Even after formation of the \ac{CT} complex, recombination can still occur albeit with a different spectroscopic signature.
 
-In light emission applications, the reverse of the photoexcitation process in \acp{OPV} is observed. A year after the two-layer \ac{OPV} publication, \emph{C.W. Tang and S.A. Van Slyke} created the first practical \ac{OLED} device \citep{Tang1987}. Using electron and hole transport layers, charges are directed from the cathode and anode into an emissive layer composed of organic semiconducting molecules, allowing for exciton formation and subsequent recombination. However, complications arise due to the nature of excitons in organic molecules. Vibration modes within the molecule create discrete energy states within the molecular orbitals, as described by the Franck-Condon principle (\autoref{fig:intro:vib}). Relaxation between these discrete states can change the energy of the exciton, thereby changing the colour of emitted light. \FIXME{citation} Additionally, excited triplet states can form in organic semiconductors, which generally have longer lifetimes and can decay non-radiatively, reducing the efficiency of \ac{OLED} devices. Exciton recombination from triplet states, or phosphorescence, are more rare and lower in energy when compared to recombination from excited singlet states, or fluorescence \citep{kohler2009triplet}.
+In light emission applications, the reverse of the photoexcitation process in \acp{OPV} is observed. A year after the two-layer \ac{OPV} publication, \emph{C.W. Tang and S.A. Van Slyke} created the first practical \ac{OLED} device \citep{Tang1987}. Using electron and hole transport layers, charges are directed from the cathode and anode into an emissive layer composed of organic semiconducting molecules, allowing for exciton formation and subsequent recombination. However, complications arise due to the nature of excitons in organic molecules. Vibration modes within the molecule create discrete energy states for each molecular orbital, as described by the Franck-Condon principle (\autoref{fig:intro:vib}). Relaxation between these discrete states can change the energy of the exciton, thereby changing the colour of emitted light. \FIXME{citation} Additionally, excited triplet states can form in organic semiconductors, which generally have longer lifetimes and can decay non-radiatively, reducing the efficiency of \ac{OLED} devices. Exciton recombination from triplet states, or phosphorescence, are more rare and lower in energy when compared to recombination from excited singlet states, or fluorescence \citep{kohler2009triplet}.
 
-\begin{figure}[h]
+\begin{figure}[t]
     \centering
-    \includegraphics{}
-    \caption{\FIXME{Add energy diagram with vibrational modes: phosphorescence and fluorescence.}}
+    \includegraphics[width=0.7\textwidth]{pictures/franck_condon_transitions.png}
+    \caption{Franck-Condon diagram. Vibrational modes are discrete quantum harmonic oscillator levels. \textbf{(1)} Photon excites an electron from singlet ground state into the third mode of the singlet first excited state, the $S_0(\nu=0) \rightarrow S_1(\nu'=3)$ absorption transition. \textbf{(2)} Relaxation in the excited molecule into the lowest vibrational mode $S_1(0)$, reducing the optical gap. \textbf{(3)} Exciton recombination into $S_0(2)$ due to the wavefunction overlap. This diagram demonstrates the $S_1(0) \rightarrow S_0(2)$ fluorescence transition.}
     \label{fig:intro:vib}
 \end{figure}
 

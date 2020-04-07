@@ -11,26 +11,28 @@ In this chapter, three \acf{SPM} techniques will be discussed in detail, includi
 %%%%%
 \section{Scanning tunnelling microscopy}
 
-\Acf{STM} was invented in 1981 by Gerd Binning and Heinrich R\"ohrer at IBM \citep{binnig1982surface}, and was the first example of a scanning probe microscope. The \ac{STM} gives atomic resolution topographic maps of the electronic structure of a conductive sample by employing quantum tunnelling between the sample and a conductive tip, controlled by sub-nanometre precise piezoelectric motors. As seen in \autoref{fig:exptech:stmsetup}, a sharp tip is brought close to a sample, with tip-sample distances ($z$) on the order of 1--\SI{10}{\angstrom}. A bias voltage difference ($V_B$) is in place between the electrodes, typically on the order of 0.01--\SI{1}{\volt}, driving the directional quantum tunnelling of electrons through the vacuum potential barrier between the tip and the sample, giving a small but detectable tunnelling current ($I$) on the order of picoamperes. The current signal goes through a preamplifier and is transduced into a voltage signal, which can then be fed into the control system.
+\Acf{STM} was invented in 1981 by Gerd Binning and Heinrich R\"ohrer at IBM \citep{binnig1982surface}, and was the first example of a scanning probe microscope. The \ac{STM} gives atomic resolution topographic maps of the electronic structure of a conductive sample by employing quantum tunnelling between the sample and a conductive tip, controlled by sub-nanometre precise piezoelectric motors. As seen in \autoref{fig:exptech:stmsetup}, a sharp tip is brought close to a sample, with tip-sample distances ($z$) on the order of 1--\SI{10}{\angstrom}. A bias voltage difference ($V_B$) is in place between the electrodes, typically on the order of 0.01--\SI{1}{\volt}, driving the directional quantum tunnelling of electrons through the vacuum potential barrier between the tip and the sample, giving a small but detectable tunnelling current ($I_t$) on the order of picoamperes. The current signal goes through a preamplifier and is transduced into a voltage signal, which can then be fed into the control system.
 
 \begin{figure} [h]
     \centering
-    %\includegraphics[width=3in]{file}
-    \caption{\FIXME{Make a STM setup diagram here and reference it.}}
+    \includegraphics[width=0.65\textwidth]{pictures/stm_diagram.png}
+    \caption{Schematic of STM system. }
     \label{fig:exptech:stmsetup}
 \end{figure}
 
-\sloppy An intuition for the origin of this tunnelling current could be gathered from a crude \ac{1D} one particle model (\autoref{fig:exptech:wkb}). The solutions of the Schr\"odinger equation in the tip and sample regions would be oscillatory free-particle wave functions\footnote{Electrons in a metal are assumed to behave like free particles.}, while inside the barrier would give wave function $\psi(z) = e^{-kz}$, with $k^2 = 2m\Phi/\hbar^2$. Here, $\Phi = V_B(z) - E$ is the work function, $E$ is the energy of the electron. If the distance $z$ between tip and sample is small enough, the wave function would be non-zero on the other side of the barrier. From the \ac{1D} \ac{WKB} approximation, the transmission coefficient is
+\sloppy An intuition for the origin of this tunnelling current could be gathered from a crude \ac{1D} one particle model (\autoref{fig:exptech:wkb}). The solutions of the Schr\"odinger equation in the tip and sample regions would be oscillatory free-particle wave functions\footnote{Electrons in a metal are assumed behave like free particles.}, while inside the barrier would give wave function $\psi(z) = e^{-kz}$, with $k^2 = 2m({V_B(z) - E})/\hbar^2$ where $V_B(z)$ is the barrier potential and $E$ is the energy of the tunnelling electron. For electrons with energies high enough and tip-sample distance $z$ small enough, the wave function would be non-zero on the other side of the barrier. From the \ac{1D} \ac{WKB} approximation, the probability of transmission is
 \begin{equation} \label{eq:exptech:transfcn}
 T(z,E) = \exp{\left(-2\int_{z_1} ^{z_2} k dz \right)} = \exp{\left(-2  \int_{z_1}^{z_2} \sqrt{\frac{2m}{\hbar^2}(V_B(z) - E)} dz \right)}.
 \end{equation}
-When the barrier potential \FIXME{Talk about the effective barrier height, and how the (z) dependence is dropped from $V_B(z)$} is held constant as in \ac{STM}, we have $T \propto e^{-2kz}$. This tunnelling current is extremely sensitive to changes in $z$, dropping off exponentially with increasing tip-sample distances. This sensitivity allows for picometre height resolution, while the atomically sharp tip allows for sub-nanometre lateral resolution imaging.
+
+The barrier potential is unknown, and is often assumed be a trapezoidal barrier \citep{}, as shown in \autoref{fig:exptech:wkb}. For experimental analysis, the trapezoidal barrier is approximated by a rectangular barrier with constant energy of $V_B = (\Phi_t + \Phi_s + eV_b)/2$. For a constant bias voltage in \ac{STM}, we have $I_t \propto e^{-2kz}$. The tunnelling current is extremely sensitive to changes in $z$, dropping off exponentially with increasing tip-sample distances. This sensitivity allows for picometre height resolution, while the atomically sharp tip allows for sub-nanometre lateral resolution imaging.
 
 
-\begin{figure} [h]
+\begin{figure} [t]
     \centering
-    %\includegraphics[width=3in]{file}
-    \caption{\FIXME{Make a WKB figure here.}}
+    \includegraphics[width=\textwidth]{pictures/wkb.png}
+    \caption{Schematic of 1D tunnelling between tip and sample. Wave functions in the tip and sample are oscillatory, and exponentially decaying in the vacuum barrier. A positive bias allows electrons under the tip Fermi energy $\varepsilon_t$ to tunnel into states above the sample Fermi energy $\varepsilon_s$.
+    Trapezoidal barrier is often approximated with a constant potential based on the average work function and the bias energy.}
     \label{fig:exptech:wkb}
 \end{figure}
 
@@ -56,12 +58,12 @@ It is important to note that an \ac{STM} image should not be interpreted as a ph
 
 \Acf{STS} is a technique similar to \ac{STM}, but allows for energetic resolution of the \ac{LDOS} of the sample. At a point over the sample, the tip is held at a constant height and the current feedback loop is turned off. The tunnelling current is then measured as the bias between tip and sample is swept across a range of values. For studying organic molecules, the bias typically goes up to $\sim \SI{3}{V}$ depending on the molecular stability and the energy at which the orbital features are found.
 
-The relationship between the current signal, $I(V)$, and the \ac{LDOS} can be understood by returning to the \ac{1D} model (\autoref{fig:exptech:wkb}). The tip is assumed to have a constant density of states. The bias voltage shifts the energy of the electrons in the tip relative to those of the sample. At positive biases, the Fermi level\footnote{The Fermi level is the electrochemical potential of the material, or the energy at which there is 50\% state occupation at finite temperatures. This is not to be confused with the Fermi energy, which is defined for $T=0$K. Later, the terms will be used interchangeably, as our experimental condition is close to absolute zero.} of the tip shifts up, allowing electrons to tunnel into the unoccupied states of the sample. Conversely, at negative biases, the Fermi level of the tip shifts down, allowing electrons to tunnel from the occupied sample states into the tip. Changes in the sample density of states $\rho_s(E)$, both occupied and unoccupied, will open new tunnelling channels that are reflected in changes in the measured $I(V)$. More details on the tunnelling current and the recovery of the density of states are described in the below sections.
+The relationship between the current signal, $I(V)$, and the \ac{LDOS} can be understood by returning to the \ac{1D} tunnelling model (\autoref{fig:exptech:stsldos}). The tip is assumed to have a constant density of states. The bias voltage shifts the energy of the electrons in the tip relative to those of the sample. At positive biases, the Fermi level\footnote{The Fermi level is the electrochemical potential of the material, or the energy at which there is 50\% state occupation at finite temperatures. This is not to be confused with the Fermi energy, which is defined for $T=0$K. The terms will be used interchangeably, as our experimental condition is close to absolute zero.} of the tip shifts up, allowing electrons to tunnel into the unoccupied states of the sample. Conversely, at negative biases, the Fermi level of the tip shifts down, allowing electrons to tunnel from the occupied sample states into the tip. Changes in the sample density of states $\rho_s(E)$, both occupied and unoccupied, will open new tunnelling channels that are reflected in changes in the measured $I(V)$. More details on the tunnelling current and the recovery of the density of states are described in the below sections.
 
 \begin{figure} [h]
     \centering
-    %\includegraphics[width=3in]{file}
-    \caption{\FIXME{Add a diagram and explain exactly how the LDOS relates to I(V).}}
+    \includegraphics[width=\textwidth]{pictures/sts_ldos.png}
+    \caption{Schematic showing the tunnelling process as a function of bias voltage. \textbf{(a)} At negative bias voltage, the tip Fermi energy is below the sample Fermi energy. The resulting current arises from electrons of the occupied sample LDOS tunnelling into the tip. \textbf{(b)} For positive bias voltages, the reverse process occurs, and electrons in the tip tunnel into the unoccupied sample LDOS.}
     \label{fig:exptech:stsldos}
 \end{figure}
 
@@ -201,8 +203,8 @@ Inelastic processes in tunnelling accounts for about 1\% of the total current, m
 
 \begin{figure} [h]
     \centering
-    %\includegraphics[width=3in]{file}
-    \caption{\FIXME{Energy diagrams of plasmon generation from \ac{IET} and \ac{HET}.} }
+    \includegraphics[width=\textwidth]{pictures/spp_emission.png}
+    \caption{ Diagram of excitation of SPP through inelastic tunnelling. The process is possible at negative biases as well. \textbf{(a)} Electrons tunnel inelastically into the sample. The energy excites a surface plasmon which decays to give emission. \textbf{(b)} Energy from hot electron convert into charge oscillations and associated electromagnetic fields. Plasmons localized to the surface become SPPs. }
     \label{fig:exptech:iet-het}
 \end{figure}
 
@@ -220,10 +222,10 @@ Charge injection is generally accepted as the primary mechanism for luminescence
 
 
 
-\begin{figure} [h]
+\begin{figure} [t]
     \centering
-    %\includegraphics[width=3in]{file}
-    \caption{\FIXME{The two methods of generation for luminescence on organic semiconductors.} }
+    \includegraphics[width=0.9\textwidth]{pictures/exciton_mechanisms.png}
+    \caption[Energy diagrams to describe two different emission mechanisms of an organic molecule. \textbf{(a)} Plasmon-mediated and \textbf{(b)} charge injection exciton formation.]{Energy diagrams to describe two different emission mechanisms of an organic molecule. \textbf{(a)} Plasmon-mediated and \textbf{(b)} charge injection exciton formation. Figure adapted from \citep{kuhnke2017atomic}. }
     \label{fig:exptech:2-mechanisms}
 \end{figure}
 
