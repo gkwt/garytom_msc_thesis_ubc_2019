@@ -14,8 +14,8 @@ All experimental measurements were made on an Omicron \ac{UHV} \ac{LT} \ac{SPM} 
 
 \begin{figure} [h]
     \centering
-    %\includegraphics[width=3in]{file}
-    \caption{\FIXME{Image of the microscope.}}
+    \includegraphics[width=0.6\textwidth]{pictures/microscope.png}
+    \caption{Image of Omicron UHV LT SPM with optical access. The optical table used for luminescence experiments is mounted to the microscope.}
     \label{fig:expsetup:omicron}
 \end{figure}
 
@@ -33,7 +33,7 @@ The imaging \ac{SPM} head is shown in \autoref{fig:expsetup:head}. The entire ap
 
 \begin{figure} [h]
     \centering
-    \includegraphics[width=2.5in]{pictures/head.png}
+    \includegraphics[width=0.6\textwidth]{pictures/head.png}
     \caption{\FIXME{STM head.}}
     \label{fig:expsetup:head}
 \end{figure}
@@ -41,33 +41,33 @@ The imaging \ac{SPM} head is shown in \autoref{fig:expsetup:head}. The entire ap
 There are two ports for optical access to the \ac{SPM} head. A camera used for coarse tip approach occupies one, while a home-built lens tube used for \ac{STML} occupies the other. A planoconvex sapphire lens (Melles-Griot) sits inside the lens tube, about \SI{18}{mm} from the tip-sample junction, at an angle of \SI{25}{\degree} from the sample. This geometry allows for collection of photons in about 5\% of the half solid angle above the sample. In order to maximize photon collection, the lens is focused at the tip-sample junction for the Ag(111) substrate. The tip-sample junction is well approximated as a point source of light, and any shift from the lens focal point can broaden and weaken spectral features. When using the Au(111) thin film substrate, the height of the sample is different resulting in weaker \ac{STML} signals.
 % PXS-10.0-15.4-S
 
-The light from the lens then passes through ports in the two heat shields. These ports have KG5 \ac{IR} filters (SCHOTT) situated inside to reduce radiative heating of the \ac{SPM} head, and reduction in cryostat hold time. Photon emission from organic semiconductor are often in the visible to near-\ac{IR} range, so the filters were later replaced with a WG41050 bandpass filter  (ThorLabs) that transmits wavelengths up to \SI{1000}{nm}. The transmission curves of the filters are shown in \autoref{fig:expsetup:windows}. To counteract increased thermal energy entering the heat shields, the inner heat shield port opening was reduced from \SI{20}{mm} to \SI{12}{mm} in diameter using a \SI{0.4}{mm} thick gold-plated BeCu plate. After replacement of the filter, no noticeable changes were seen in the cryogenic hold time. \emph{All \ac{STML} data was taken with the KG5 \ac{IR} filters in place}. Due to time constraints, \ac{STML} measurements were not repeated after the new window system was installed. The photons finally exit the \ac{LT} chamber through a Kodial vacuum viewport (VacGen), where they then enter an external optical setup mounted on the microscope. 
 \begin{figure} [h]
     \centering
-    \begin{subfigure}{.5\textwidth}
+    \begin{subfigure}{.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{pictures/windows_filters.jpg}
-        \captionsetup{width=0.9\textwidth}
+        \includegraphics[width=\textwidth]{pictures/windows_filters_cropped.jpg}
+        \captionsetup{width=\textwidth}
         \caption{\emph{Left:} KG5 IR filter with \SI{20}{mm} opening cover. \emph{Right:} WG41050 bandpass filter with \SI{12}{mm} opening cover. }
     \end{subfigure}
-    \hfill
-    \begin{tabular}{c}
-        \begin{subfigure}{.44\textwidth}
+    
+        \begin{subfigure}{.48\textwidth}
             \centering
             \includegraphics[width=\textwidth]{pictures/KG5_trans.jpg}
             \caption{KG5 transmission curve.}
         \end{subfigure}
-      \\
-        \begin{subfigure}{.44\textwidth}
+      \hfill
+        \begin{subfigure}{.48\textwidth}
             \centering
             \includegraphics[width=\textwidth]{pictures/UVFS_trans.jpg}
             \caption{WG41050 transmission curve.}
         \end{subfigure}
-    \end{tabular}
     
     \caption{Details of filters and windows. \textbf{(a)} IR and bandpass filters and respective windows. The transmission curves shown in \textbf{(b)} and \textbf{(c)}.}
     \label{fig:expsetup:windows}
 \end{figure}
+
+The light from the lens then passes through ports in the two heat shields. These ports have KG5 \ac{IR} filters (SCHOTT) situated inside to reduce radiative heating of the \ac{SPM} head, and reduction in cryostat hold time. Photon emission from organic semiconductor are often in the visible to near-\ac{IR} range, so the filters were later replaced with a WG41050 bandpass filter  (ThorLabs) that transmits wavelengths up to \SI{1000}{nm}. The transmission curves of the filters are shown in \autoref{fig:expsetup:windows}. To counteract increased thermal energy entering the heat shields, the inner heat shield port opening was reduced from \SI{20}{mm} to \SI{12}{mm} in diameter using a \SI{0.4}{mm} thick gold-plated BeCu plate. After replacement of the filter, no noticeable changes were seen in the cryogenic hold time. \emph{All \ac{STML} data was taken with the KG5 \ac{IR} filters in place}. Due to time constraints, \ac{STML} measurements were not repeated after the new window system was installed. The photons finally exit the \ac{LT} chamber through a Kodial vacuum viewport (VacGen), where they then enter an external optical setup mounted on the microscope. 
+
 
 
 \subsection{Tip preparation}
@@ -78,8 +78,17 @@ The Pt/Ir tips were made by mechanically shearing a 0.38mm diameter wire. The Pt
 
 \begin{figure} [h]
     \centering
-    \includegraphics[width=3in,angle=-90]{pictures/etching.jpg}
-    \caption{\FIXME{Caption for tip etching setup. Also include diagram for meniscus etching.}}
+    % \begin{subfigure}{.2\textwidth}
+    % \includegraphics[width=\textwidth]{pictures/etch_setup.jpg}
+    % \end{subfigure}
+    % \hfill
+    % \begin{subfigure}{.7\textwidth}
+    % \includegraphics[width=\textwidth]{pictures/etch_diagram.png}
+    % \end{subfigure}
+    
+    \includegraphics[width=\textwidth]{pictures/etch_diagram.png}
+    
+    \caption{Diagram of Ag tip electrochemical etching setup. \textbf{(a)} Ag wire is suspended in acid with mesh electrode around it. An AC bias of \SI{39}{V} is applied with the negative terminal attached to the wire. Telfon tubing protects the bottom portion of the wire. \textbf{(b)} Preferential etching at the meniscus and shifting of the meniscus as etching progresses results in a tapered shape. \textbf{(c)} The dropped tip is used. Etching immediately stops for dropped tip once it is separated from the wire. }
     \label{fig:expsetup:etching}
 \end{figure}
 
@@ -87,16 +96,34 @@ Ag is a material with a low lossyness, making it optimal for \ac{STML}. Due to t
 
 The etching setup is shown in \autoref{fig:expsetup:etching}. A 0.404mm diameter Ag wire was cleaned with acetone and isopropyl alcohol to give a clean etching surface. A teflon tubing covered the bottom $\sim$ \SI{3}{mm} of the wire to protect the region from chemical etching. The wire was then clamped and suspended in a solution of 50\% w/w citric acid in deionized water, with the meniscus about \SI{1.5}{mm} above the teflon protected region. A cylindrical mesh electrode was submerged into the solution with the wire in the centre to provide uniform etching on all sides of the wire. The wire was then etched using an alternating current voltage source at \SI{39}{V}, with the negative terminal connected to the wire, and the ground terminal connected to the mesh electrode. 
 
-Etching typically took around \SI{30}{min}. Surface tension effects and preferential etching at the meniscus produces a sharp metallic tip from the submerged portion of the wire, which drops into the solution, breaking electrical contact with the negative terminal and ending etching processes (\autoref{fig:expsetup:etching}). The tip was removed from the solution with the sharp side facing away from the meniscus, as the surface tension can bend the tip. The teflon tubing was removed, and the tip was rinsed in deionized water, followed by acetone and isopropyl alcohol. The tip was then examined with an optical microscope to ensure the tip was macroscopically sharp, and possessed a shiny metallic surface (\autoref{fig:expsetup:image-plasmon}). With the tip exposed to air, the Ag is susceptible to oxidation which can quench luminescence signals. If the tip passed inspection, it was immediately mounted and placed under vacuum in the microscope. We found the most success with Ag tips that were exposed to air for no longer than \SI{20}{min}.
-
-Due to the softness of Ag, it is extremely important that the tip does not crash into the surface. To prepare the tip for \ac{STML} experiments, the tip was repeatedly pulsed with voltages ranging from $5-\SI{10}{V}$ in order to remove residue and oxide from the tip. The shape of the tip was modified by piezo-controlled indentation into the metal substrate, ranging from 1$\SI{-10}{nm}$. With the optical setup aligned (discussed in the next section), the tip should demonstrate strong plasmonic emission at $\sim \SI{550}{nm}$ on Ag(111) when held at $V_b =\SI{3}{V}$ and $I_t = \SI{200}{pA}$ (\autoref{fig:expsetup:image-plasmon}).
-
 \begin{figure} [h]
     \centering
-    %\includegraphics[width=3in,angle=-90]{pictures/etching.jpg}
-    \caption{\FIXME{show some tips with plasmons (2-3).}}
+    \begin{subfigure}[t]{0.35\textwidth}
+    \includegraphics[width=\textwidth]{pictures/10x_meniscus_agtip_sb.png}
+    \caption{}
+    \end{subfigure}
+    \hspace{0.5cm}
+    \begin{subfigure}[t]{0.36\textwidth}
+    \includegraphics[width=\textwidth]{pictures/20x_meniscus_agtip_sb.png}
+    \caption{}
+    \end{subfigure}
+    
+    \caption{Ag tip imaged with optical microscope after etching. \textbf{(a)} is at 10x magnification, and \textbf{(b)} is at 20x magnification.}
     \label{fig:expsetup:image-plasmon}
 \end{figure}
+
+Etching typically took around \SI{30}{min}. Surface tension effects and preferential etching at the meniscus produces a sharp metallic tip from the submerged portion of the wire, which drops into the solution, breaking electrical contact with the negative terminal and ending etching processes (\autoref{fig:expsetup:etching}). The tip was removed from the solution with the sharp side facing away from the meniscus, as the surface tension can bend the tip. The teflon tubing was removed, and the tip was rinsed in deionized water, followed by acetone and isopropyl alcohol. The tip was then examined with an optical microscope to ensure the tip was macroscopically sharp, and possessed a shiny metallic surface (\autoref{fig:expsetup:image-plasmon}). With the tip exposed to air, the Ag is susceptible to oxidation which can quench luminescence signals. If the tip passed inspection, it was immediately mounted and placed under vacuum in the microscope. We found the most success with Ag tips that were exposed to air for no longer than \SI{15}{min}.
+
+\begin{figure}[h]
+    \centering
+    
+    \includegraphics[width=0.6\textwidth]{pictures/ag111_plasmon.png}
+    \caption{Plasmon emission with Ag tip on Ag(111) at  $V_b =\SI{3}{V}$, $I_t = \SI{200}{pA}$, and exposure time $t_x = \SI{10}{s}$.}
+    
+    \label{fig:expsetup:plasmon}
+\end{figure}
+
+Due to the softness of Ag, it is extremely important that the tip does not crash into the surface. To prepare the tip for \ac{STML} experiments, the tip was repeatedly pulsed with voltages ranging from $5-\SI{10}{V}$ in order to remove residue and oxide from the tip. The shape of the tip was modified by piezo-controlled indentation into the metal substrate, ranging from 1$\SI{-10}{nm}$. With the optical setup aligned (discussed in the next section), the tip should demonstrate strong plasmonic emission at $\sim \SI{550}{nm}$ on Ag(111) (\autoref{fig:expsetup:plasmon}).
 
 
 
@@ -107,12 +134,12 @@ Light collected by the lens inside the \ac{SPM} head exited the \ac{LT} chamber 
 
 \begin{figure} [h]
     \centering
-    %\includegraphics[width=3in]{file}
-    \caption{\FIXME{Optical windows. With transmission curves.}}
+    \includegraphics[width=0.8\textwidth]{pictures/optics.png}
+    \caption{Diagram of external optics on optics table mounted on microscope. The red line represents the beam path.}
     \label{fig:expsetup:optics}
 \end{figure}
 
-Before starting any experiment, the \ac{CCD} was calibrated for each spectrometer grating using a mountable Hg lamp. The provided software uses the characteristic emission peaks of Hg to correspond \ac{CCD} pixels to photon wavelength, with typical uncertainty values of $\pm$\SI{0.1}{nm}. In the presented work, two spectrometer gratings were used, with grating densities 300 gratings (gr)/mm and 600 gr/mm.\footnote{Some signal may be lost due to the imperfect reflectivity of the gratings. Efficiencies of the gratings at the regions of interest are around $70 - 80 \%$ \citep{princetongratings}} Higher grating density allows for higher resolution at the expense of spectral range. Once calibrated, all light sources in the room were covered or turned off and a background spectrum was taken. This background spectrum is subtracted from all experimental data, and accounts for thermal noise and stray light in the room.
+Before starting any experiment, the \ac{CCD} was calibrated for each spectrometer grating using a mountable Hg lamp. The provided software uses the characteristic emission peaks of Hg to correspond \ac{CCD} pixels to photon wavelength, with typical uncertainty values of $\pm$\SI{0.1}{nm}. Intensity calibration was not performed due to issues with the provided calibration lamp, hence the intensity of measured emissions are on an arbitrary scale. In the presented work, two spectrometer gratings were used, with grating densities 300 gratings (gr)/mm and 600 gr/mm.\footnote{Some signal may be lost due to the imperfect reflectivity of the gratings. Efficiencies of the gratings at the regions of interest are around $70 - 80 \%$ \citep{princetongratings}} Higher grating density allows for higher resolution at the expense of spectral range. Once calibrated, all light sources in the room were covered or turned off and a background spectrum was taken. This background spectrum is subtracted from all experimental data, and accounts for thermal noise and stray light in the room.
 
 The optical setup was then aligned to ensure that emission from the tip-sample junction entered the spectrometer. To begin, the lens on the optical table was removed, and the tip was coarse approached to the sample. The face of the spectrometer was illuminated such that a shadow of the slit could be seen on the surface of the metallic substrate. The shadow of the slit and the tip-sample junction were aligned, either by moving the tip or changing the angle of the two mirrors. With the tip-sample junction and spectrometer slit aligned, the lens can be mounted onto the micrometer stage. Shining light in through the camera port, the light reflected off the tip-sample junction can be focused into the spectrometer slit by adjusting the position of the lens.
 
@@ -147,7 +174,7 @@ An \ac{STM} image of the Au(111) thin film (\autoref{fig:expsetup:Au111}) shows 
 \begin{figure} [h]
     \centering
     %\includegraphics[width=3in]{file}
-    \caption{\FIXME{Ag(111) with few defects., also show the STS/dIdV.}}
+    \caption{\FIXME{Au(111) with few defects., also show the STS/dIdV.}}
     \label{fig:expsetup:Au111}
 \end{figure}
 
