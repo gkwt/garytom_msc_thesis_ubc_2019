@@ -6,8 +6,7 @@
 
 Prior to the work done in this thesis, \ac{STML} from a single organic molecule has not yet been detected on our system. To optimize and ensure the viability of the experimental setup, \ac{STML} was performed on prototypical organic semiconducting molecules \ac{PTCDA} \citep{Rzeznicka2011, Kimura2019} and \ac{ZnPc} \citep{Zhang2016, Doppagne2017, Zhang2017, Imada2016, Doppagne2018, Miwa2019}, both of which have had successful reports of \ac{STML} experiments. Fluorination of phthalocyanine molecules have previously been demonstrated as a method to tune the electronic and optical energies of the molecule in bulk \citep{schwarze2016band, warren2019controlling}. Further experiments were carried out on \ch{F8ZnPc} to explore the effects of fluorination on the structural, electronic and optical properties of ZnPc.
 
-During \ac{STML} experiments, the tip was parked on top of the molecule with a certain bias, and setpoint current. The shutter to the spectrometer was then opened for a certain exposure time $t_x$. The parameters for each \ac{STML} experiment will be listed as $V_b/I_t/t_x$.
-
+During \ac{STML} experiments, the tip was parked on top of the molecule with a certain bias, and setpoint current. The shutter to the spectrometer was then opened for a certain exposure time ($t_x$). The parameters for each \ac{STML} experiment will be listed as $V_b/I_t/t_x$.
 
 \section{Plasmon emission from substrates}
 
@@ -17,8 +16,8 @@ Plasmon emission from the bare metallic surface can vary in energy and intensity
 
 \begin{figure} [h]
     \centering
-    \includegraphics[width=4in]{pictures/Ag_Au_plasmon_3V_200pA_10s.jpg}
-    \caption{\FIXME{Ag and Au plasmons, spectra taken with the same tip.}}
+    \includegraphics[width=0.85\textwidth]{pictures/Ag_Au_plasmon_3V_200pA_10s.jpg}
+    \caption{Plasmonic emission on Ag(111) and Au(111) thin film collected with the same Ag tip (\stmlparams{3}{200}{10}). The signal on the thin film is lower by an order of magnitude, and red-shifted. The Ag(111) emission peaks at \SI{573}{nm}, while the Au(111) emission peaks at \SI{633}{nm}.}
     % 573.3192 Ag, 632.7994 Au
     \label{fig:opv:metal-plasmon}
 \end{figure}
@@ -30,8 +29,8 @@ When \ac{STML} experiments were carried out on molecular species, they were deco
 
 \begin{figure} [h]
     \centering
-    \includegraphics[width=4in]{pictures/NaCl_enhancement_Ag111_275V_250pA_10s.jpg}
-    \caption{\FIXME{Ag and Au plasmons, modified by nacl (2ML and 3ML?)}}
+    \includegraphics[width=0.85\textwidth]{pictures/NaCl_enhancement_Ag111_275V_250pA_10s.jpg}
+    \caption{Plasmonic emission from Ag(111) and on (2ML)NaCl/Ag(111) (\stmlparams{2.75}{250}{10}). There is an enhancement on the bilayer NaCl with minimal shift in energy. }
     % 636.9401 Ag, 628.6561 NaCl/Ag
     \label{fig:opv:nacl-plasmon}
 \end{figure}
@@ -66,16 +65,16 @@ Thicker layers of NaCl further dissociate the molecule from the metallic substra
 
 % Previous reports of ZnPc on this substrate show that the electronic states of the molecule do not change much in structure, and only experience a rigid shift of $\approx \SI{-1}{eV}$ in energy when compared to (2ML)NaCl/Au(111), due to the lower work function of (2ML)NaCl/Ag(111) \citep{Doppagne2017,Doppagne2018}. With an optimized Ag tip, photoluminescence was detected on the molecule, with an emission peak at \SI{630}{nm} or \SI{1.96}{eV} (\autoref{fig:opv:znpc-stml}).
 
-
+                    
 
 \begin{figure} [h]
     \centering
-    \includegraphics[width=3.5in]{pictures/znpc_3V_300pA_300s.jpg}
-    \caption{\FIXME{show inset with the molecule on surface, and position of tip on molecule}}
+    \includegraphics[width=0.85\textwidth]{pictures/znpc_+ve_emission_inset.png}
+    \caption{Photoluminescence on ZnPc on (2ML)NaCl/Ag(111), with corresponding plasmon on substrate. Both spectra taken at \stmlparams{3}{300}{300}. Inset is the corresponding STM image with tip position during STML indicated (\stmparams{15}{15}{2}{10}). }
     \label{fig:opv:znpc-stml}
 \end{figure}
 
-There are notable differences between our results and the results of previous reports of \ac{STML} on ZnPc \citep{Zhang2016, Doppagne2017, Zhang2017, Doppagne2018}. Previously reported photon peak were attibuted to $S_1 \rightarrow S_2$ 0-0 transitions and are at \SI{652}{nm} or \SI{1.9}{eV}. The peak energy in \autoref{fig:opv:znpc-stml} is higher in energy. Additionally, the peak in emission seen in \autoref{fig:opv:znpc-stml} is about four times broader, with \ac{FWHM} of about \SI{60}{meV}, while previously reported emissions have \ac{FWHM} of about \SI{15}{meV}.
+There are notable differences between our results and the results of previous reports of \ac{STML} on ZnPc \citep{Zhang2016, Doppagne2017, Zhang2017, Doppagne2018}. Previously reported photon peak were attibuted to $S_1(0) \rightarrow S_0(0)$ transitions and are at \SI{652}{nm} or \SI{1.9}{eV}. The peak energy in \autoref{fig:opv:znpc-stml} is higher in energy. Additionally, the peak in emission seen in \autoref{fig:opv:znpc-stml} is about four times broader, with \ac{FWHM} of about \SI{60}{meV}, while previously reported emissions have \ac{FWHM} of about \SI{15}{meV}.
 
 The shift in energy and broadening of the molecular photoluminescence may be a result of the IR filters in place during our experiments. All \ac{STML} data was taken with the KG5 infrared filters in place, which have a transmittance cutoff in the range of the emission seen in \autoref{fig:opv:znpc-stml}. At around \SI{650}{nm}, the transmittance drops significantly to 50\% (\autoref{fig:expsetup:windows}), resulting in blue-shift and broadening of our signal. 
 
@@ -94,21 +93,21 @@ Another factor that may explain the discrepancies observed is the presence of an
 
 The next system studied was the \ac{PTCDA} molecule on (2ML)NaCl/Au(111). As discussed before, the Au(111) thin film sample is slightly out of focus of the lens, resulting in weaker signals. However, \ac{PTCDA} is highly electronegative, and the (2ML)NaCl/Ag(111) substrate has a low work function, resulting in a charged PTCDA \citep{cochrane2017single,cochrane2018molecularly}. By using Au(111), which has a higher work function, as the metallic substrate, the PTCDA molecule was not charged on the surface, giving a simpler system to probe. Additionally, previous preliminary work in our group has demonstrated luminescence quenching on the PTCDA/(2ML)NaCl/Ag(111) system \citep{roussy2016coupling}, although a recent publication has shown luminescence at higher biases \citep{Kimura2019}.
 
-Photoluminescence from a single PTCDA on (2ML)NaCl/Au(111) was detected, with an emission peak at \SI{670}{nm} or \SI{1.85}{eV}, at \SI{3}{V}/\SI{200}{pA}/\SI{300}{s} (\autoref{fig:opv:ptcda-stml}). The \ac{FWHM} of the peak is about \SI{90}{meV}, quite broad for single molecule emission. During the acquisition, the PTCDA shifted away, resulting in additional photon counts from the plasmonic emission. To compensate, the signal detected from the bare substrate was subtracted from the molecular luminescence.
+Photoluminescence from a single PTCDA on (2ML)NaCl/Au(111) was detected, with an emission peak at \SI{670}{nm} or \SI{1.85}{eV}, at \SI{3}{V}/\SI{200}{pA}/\SI{300}{s} (\autoref{fig:opv:ptcda-stml}). The \ac{FWHM} of the peak is about \SI{90}{meV}, quite broad for single molecule emission. During the acquisition, the PTCDA shifted away, resulting in additional photon counts from the plasmonic emission.
 
 
 \begin{figure} [h]
     \centering
-        \includegraphics[width=3.5in]{pictures/ptcda_subtract_pl_3V_200pA_300s.jpg}
-    \caption{\FIXME{show inset with the molecule on surface, and position of tip on molecule}}
+        \includegraphics[width=0.85\textwidth]{pictures/ptcda_+ve_emission_inset.png}
+    \caption{Photoluminescence on PTCDA on (2ML)NaCl/Au(111) (\stmlparams{3}{200}{300}), with corresponding plasmon on substrate (\stmlparams{3}{200}{30}). Inset is the corresponding STM image with tip position during STML indicated (\stmparams{20}{20}{2}{10}). }
     \label{fig:opv:ptcda-stml}
 \end{figure}
 
 There are significantly fewer \ac{STML} studies of PTCDA when compared to ZnPc. For comparison, we will refer to references \citep{Rzeznicka2011} and \citep{Kimura2019}. In the former, \textit{Rze\'znicka et al.} studied self-assembled bilayers of PTCDA on Au(111), with the first monolayer acting as the decoupling layer. The authors reported broad emission peaks at \SI{1.8}{eV} and \SI{2.35}{eV}, with FWHM of approximately \SI{100}{meV}, at a bias voltage of \SI{3}{V}. In the latter, \textit{Kimura et al.} studied single negatively charged PTCDA on (3ML)NaCl/Ag(111), detecting a sharp emission peak at \SI{2.45}{eV} with bias \SI{-3.4}{V}. 
 
-The peak observed in \autoref{fig:opv:ptcda-stml} most closely resembles the lower energy \SI{1.8}{eV} emission seen by \textit{Rze\'znicka et al.}, who attributed the emission to the \ac{CT} exciton formed between the first and second monolayers of PTCDA. However, our system only consisted of a single isolated PTCDA molecule, with no neighbouring molecules to form a \ac{CT} complex. Additionally, the broadness seen by \textit{Rze\'znicka et al.} could be explained by the effects of adjacent molecules, but our isolated PTCDA system exhibits similar broadness in emissions, possibly due to the filtering effects of the IR windows. Regarding the higher energy photon emission, both publications attributed the higher energy peak to the $S_1 \rightarrow S_0$ 0-0 exciton recombination. However, we do not see this peak in our experiment, possibly due to the weak plasmonic enhancement in that region of the spectrum.
+The peak observed in \autoref{fig:opv:ptcda-stml} most closely resembles the lower energy \SI{1.8}{eV} emission seen by \textit{Rze\'znicka et al.}, who attributed the emission to the \ac{CT} exciton formed between the first and second monolayers of PTCDA. However, our system only consisted of a single isolated PTCDA molecule, with no neighbouring molecules to form a \ac{CT} complex. Additionally, the broadness seen by \textit{Rze\'znicka et al.} could be explained by the effects of adjacent molecules, but our isolated PTCDA system exhibits similar broadness in emissions, possibly due to the filtering effects of the IR windows. Regarding the higher energy photon emission, both publications attributed the higher energy peak to the $S_1(0) \rightarrow S_0(0)$ exciton recombination. However, we do not see this peak in our experiment, possibly due to the weak plasmonic enhancement in that region of the spectrum.
 
-While the previous references are useful as comparisons, the studied PTCDA on (2ML)NaCl/Au(111) system was isolated and uncharged. The photoluminescence observed on this system may be the $S_1 \rightarrow S_0$ 0-0 exciton transition for a neutral PTCDA molecule. And, like the experimental parameters used for \ac{STML} on ZnPc, the photoluminescence was observed at a high positive bias of \SI{3}{V}. It is possible that tip induced conformational changes resulted in the suppression and enhancement of different vibrational transitions in the molecule. It is also possible that an alternative mechanism contributed to the emission seen in \autoref{fig:opv:ptcda-stml}, such as the plasmon-mediated exciton formation, or charge injection into LUMO+1 of PTCDA, forming an exciton between the LUMO+1 and LUMO which typically have a smaller optical gap \citep{Wu2008}. Due to the stability issues of PTCDA on NaCl at high biases, probing the LUMO+1 state by \ac{STS} was not performed.
+While the previous references are useful as comparisons, the studied PTCDA on (2ML)NaCl/Au(111) system was isolated and uncharged. The photoluminescence observed on this system may be the $S_1(0) \rightarrow S_0(0)$ exciton transition for a neutral PTCDA molecule. And, like the experimental parameters used for \ac{STML} on ZnPc, the photoluminescence was observed at a high positive bias of \SI{3}{V}. It is possible that tip induced conformational changes resulted in the suppression and enhancement of different vibrational transitions in the molecule. It is also possible that an alternative mechanism contributed to the emission seen in \autoref{fig:opv:ptcda-stml}, such as the plasmon-mediated exciton formation, or charge injection into LUMO+1 of PTCDA, forming an exciton between the LUMO+1 and LUMO which typically have a smaller optical gap \citep{Wu2008}. Due to the stability issues of PTCDA on NaCl at high biases, probing the LUMO+1 state by \ac{STS} was not performed.
 
 
 
@@ -140,7 +139,7 @@ The energy of molecular orbitals can be tuned through halogenation, such as the 
 
 \begin{figure} [h]
     \centering
-        \includegraphics[width=3.5in]{pictures/f8znpc_3V_250pA_60s.jpg}
+        \includegraphics[width=0.85\textwidth]{pictures/f8znpc_3V_250pA_60s.jpg}
     \caption{\FIXME{show inset with the molecule on surface, and position of tip on molecule}}
     \label{fig:opv:f8znpc-stml_+}
 \end{figure}
@@ -167,7 +166,7 @@ The energy of molecular orbitals can be tuned through halogenation, such as the 
     
 \end{figure}
 
-The differences between the positive and negative bias \ac{STML} results could be explained by the effects described in the previous section. \FIXME{can I postulate this?} A broad vibrational peak in the negative bias emission in \autoref{fig:opv:f8znpc-stml_-} coincides at the energy of around \SI{670}{nm}---the same energy as the positive bias emission peak in \autoref{fig:opv:f8znpc-stml_+}---giving evidence for preferred vibrational exciton transitions at positive biases.
+The differences between the positive and negative bias \ac{STML} results could be explained by the effects described in the previous section. A broad vibrational peak in the negative bias emission in \autoref{fig:opv:f8znpc-stml_-} coincides at the energy of around \SI{670}{nm}---the same energy as the positive bias emission peak in \autoref{fig:opv:f8znpc-stml_+}---giving evidence for preferred vibrational exciton transitions at positive biases.
 
 
 
@@ -185,7 +184,7 @@ Surprisingly, the \ac{STM} scans at negative biases revealed a variety of topogr
     \label{fig:opv:f8znpc-stm_diff}
 \end{figure}
 
-Further \ac{STML} experiments at negative biases were conducted on the different types of \ch{F8ZnPc}, with $S_1 \rightarrow S_0$ 0-0 transition peaks varying from \SI{630}{nm} to \SI{643}{nm}. In order to correspond the emission peaks to the electronic states of the molecules, \ac{STML} along with \ac{STS} was performed on three of the observed types (\autoref{fig:opv:f8znpc-sts_stml}). With decreasing band gap, there is a corresponding decrease in the optical gap, observed as lower energy emission from exciton recombination. Further experimentation on this sample was not attempted due to the unstable nature of the Ag tip, making it unsuitable for high resolution \ac{STM} or \ac{STS}, and the wide variety of types of \ch{F8ZnPc} observed on the surface. 
+Further \ac{STML} experiments at negative biases were conducted on the different types of \ch{F8ZnPc}, with $S_1(0) \rightarrow S_0(0)$ transition peaks varying from \SI{630}{nm} to \SI{643}{nm}. In order to correspond the emission peaks to the electronic states of the molecules, \ac{STML} along with \ac{STS} was performed on three of the observed types (\autoref{fig:opv:f8znpc-sts_stml}). With decreasing band gap, there is a corresponding decrease in the optical gap, observed as lower energy emission from exciton recombination. Further experimentation on this sample was not attempted due to the unstable nature of the Ag tip, making it unsuitable for high resolution \ac{STM} or \ac{STS}, and the wide variety of types of \ch{F8ZnPc} observed on the surface. 
 
 
 \begin{figure} [h]
