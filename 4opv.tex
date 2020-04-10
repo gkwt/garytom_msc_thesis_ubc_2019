@@ -6,7 +6,7 @@
 
 Prior to the work done in this thesis, \ac{STML} from a single organic molecule has not yet been detected on our system. To optimize and ensure the viability of the experimental setup, \ac{STML} was performed on prototypical organic semiconducting molecules \ac{PTCDA} \citep{Rzeznicka2011, Kimura2019} and \ac{ZnPc} \citep{Zhang2016, Doppagne2017, Zhang2017, Imada2016, Doppagne2018, Miwa2019}, both of which have had successful reports of \ac{STML} experiments. Fluorination of phthalocyanine molecules have previously been demonstrated as a method to tune the electronic and optical energies of the molecule in bulk \citep{schwarze2016band, warren2019controlling}. Further experiments were carried out on \ch{F8ZnPc} to explore the effects of fluorination on the structural, electronic and optical properties of ZnPc.
 
-During \ac{STML} experiments, the tip was parked on top of the molecule with a certain bias, and setpoint current. The shutter to the spectrometer was then opened for a certain exposure time ($t_x$). The parameters for each \ac{STML} experiment will be listed as $V_b/I_t/t_x$.
+During \ac{STML} experiments, the tip was parked on top of the molecule with a certain bias, and setpoint current. The shutter to the spectrometer was then opened for a certain exposure time ($t_x$).
 
 \section{Plasmon emission from substrates}
 
@@ -16,7 +16,7 @@ Plasmon emission from the bare metallic surface can vary in energy and intensity
 
 \begin{figure} [h]
     \centering
-    \includegraphics[width=0.85\textwidth]{pictures/Ag_Au_plasmon_3V_200pA_10s.jpg}
+    \includegraphics[width=0.8\textwidth]{pictures/Ag_Au_plasmon_3V_200pA_10s.jpg}
     \caption{Plasmonic emission on Ag(111) and Au(111) thin film collected with the same Ag tip (\stmlparams{3}{200}{10}). The signal on the thin film is lower by an order of magnitude, and red-shifted. The Ag(111) emission peaks at \SI{573}{nm}, while the Au(111) emission peaks at \SI{633}{nm}.}
     % 573.3192 Ag, 632.7994 Au
     \label{fig:opv:metal-plasmon}
@@ -29,7 +29,7 @@ When \ac{STML} experiments were carried out on molecular species, they were deco
 
 \begin{figure} [h]
     \centering
-    \includegraphics[width=0.85\textwidth]{pictures/NaCl_enhancement_Ag111_275V_250pA_10s.jpg}
+    \includegraphics[width=0.8\textwidth]{pictures/NaCl_enhancement_Ag111_275V_250pA_10s.jpg}
     \caption{Plasmonic emission from Ag(111) and on (2ML)NaCl/Ag(111) (\stmlparams{2.75}{250}{10}). There is an enhancement on the bilayer NaCl with minimal shift in energy. }
     % 636.9401 Ag, 628.6561 NaCl/Ag
     \label{fig:opv:nacl-plasmon}
@@ -41,7 +41,7 @@ Thicker layers of NaCl further dissociate the molecule from the metallic substra
 
 \section{Study of {ZnPc}}
 
-\ac{ZnPc} is a relatively planar organic semiconducting molecule that can be thermally deposited, making it optimal for \ac{SPM} study. To maximize \ac{STML} signal, ZnPc was deposited on (2ML)NaCl/Ag(111) and probed with the Ag tip. With parameters $\SI{3.0}{V}/\SI{300}{pA}/\SI{300}{s}$, we were able to detect emission from ZnPc at \SI{630}{nm} or \SI{1.96}{eV} (\autoref{fig:opv:znpc-stml}).
+\ac{ZnPc} is a relatively planar organic semiconducting molecule that can be thermally deposited, making it optimal for \ac{SPM} study. To maximize \ac{STML} signal, ZnPc was deposited on (2ML)NaCl/Ag(111) and probed with the Ag tip. With parameters \stmlparams{3}{300}{300}, we were able to detect emission from ZnPc at \SI{630}{nm} or \SI{1.96}{eV} (\autoref{fig:opv:znpc-stml}).
 
 % Because of previous reports of \ac{STML} on ZnPc, this molecule was used to test the \ac{STML} capabilities of our system. 
 
@@ -67,10 +67,10 @@ Thicker layers of NaCl further dissociate the molecule from the metallic substra
 
                     
 
-\begin{figure} [h]
+\begin{figure} [H]
     \centering
-    \includegraphics[width=0.85\textwidth]{pictures/znpc_+ve_emission_inset.png}
-    \caption{Photoluminescence on ZnPc on (2ML)NaCl/Ag(111), with corresponding plasmon on substrate. Both spectra taken at \stmlparams{3}{300}{300}. Inset is the corresponding STM image with tip position during STML indicated (\stmparams{15}{15}{2}{10}). }
+    \includegraphics[width=0.8\textwidth]{pictures/znpc_+ve_emission_inset.png}
+    \caption{Photoluminescence on ZnPc on (2ML)NaCl/Ag(111) at positive bias, with corresponding plasmon on substrate. Both spectra taken at \stmlparams{3}{300}{300}. Inset is the corresponding STM image with tip position during STML indicated (\stmparams{15}{15}{2}{10}). }
     \label{fig:opv:znpc-stml}
 \end{figure}
 
@@ -96,10 +96,10 @@ The next system studied was the \ac{PTCDA} molecule on (2ML)NaCl/Au(111). As dis
 Photoluminescence from a single PTCDA on (2ML)NaCl/Au(111) was detected, with an emission peak at \SI{670}{nm} or \SI{1.85}{eV}, at \SI{3}{V}/\SI{200}{pA}/\SI{300}{s} (\autoref{fig:opv:ptcda-stml}). The \ac{FWHM} of the peak is about \SI{90}{meV}, quite broad for single molecule emission. During the acquisition, the PTCDA shifted away, resulting in additional photon counts from the plasmonic emission.
 
 
-\begin{figure} [h]
+\begin{figure} [H]
     \centering
-        \includegraphics[width=0.85\textwidth]{pictures/ptcda_+ve_emission_inset.png}
-    \caption{Photoluminescence on PTCDA on (2ML)NaCl/Au(111) (\stmlparams{3}{200}{300}), with corresponding plasmon on substrate (\stmlparams{3}{200}{30}). Inset is the corresponding STM image with tip position during STML indicated (\stmparams{20}{20}{2}{10}). }
+        \includegraphics[width=0.8\textwidth]{pictures/ptcda_+ve_emission_inset.png}
+    \caption{Photoluminescence on PTCDA on (2ML)NaCl/Au(111) at positive bias (\stmlparams{3}{200}{300}), with corresponding plasmon on substrate (\stmlparams{3}{200}{30}). Inset is the corresponding STM image with tip position during STML indicated (\stmparams{20}{20}{2}{10}). }
     \label{fig:opv:ptcda-stml}
 \end{figure}
 
@@ -137,10 +137,10 @@ The energy of molecular orbitals can be tuned through halogenation, such as the 
 
 \ch{F8ZnPc} was thermally deposited onto (2ML)NaCl/Ag(111) and probed with a Ag tip. Using previously observed photoluminescence of ZnPc as an estimate, the tip plasmon was tuned to enhance primarily in the region of \SI{630}{nm}. With positive bias \SI{3}{V}/\SI{250}{pA}/\SI{60}{s}, a weak emission peak was detected at \SI{675}{nm} or \SI{1.83}{eV}, with FWHM of approximately \SI{50}{meV} (\autoref{fig:opv:f8znpc-stml_+}).
 
-\begin{figure} [h]
+\begin{figure} [H]
     \centering
-        \includegraphics[width=0.85\textwidth]{pictures/f8znpc_3V_250pA_60s.jpg}
-    \caption{\FIXME{show inset with the molecule on surface, and position of tip on molecule}}
+        \includegraphics[width=0.8\textwidth]{pictures/f8znpc_+ve_emission_inset.png}
+    \caption{Photoluminescence on \ch{F8ZnPc} on (2ML)NaCl/Ag(111) at positive bias (\stmlparams{3}{250}{60}), with corresponding plasmon on substrate (\stmlparams{3}{250}{10}). A peak is observed at \SI{675}{nm}. Inset is the corresponding STM image with tip position during STML indicated (\stmparams{20}{20}{2}{10}). }
     \label{fig:opv:f8znpc-stml_+}
 \end{figure}
 
@@ -149,24 +149,22 @@ The energy of molecular orbitals can be tuned through halogenation, such as the 
 
 \begin{figure} [h]
     \centering
-    
-     \begin{subfigure}{0.45\textwidth}
-           %\includegraphics[width=4in]{pictures/2019_11_07_F8ZnPc_shifts_lobe-centre.svg}
-        \caption{\FIXME{show inset with the molecule on surface, and position of tip on molecule}}
+           \includegraphics[width=0.8\textwidth]{pictures/f8znpc_-ve_emission_inset300.png}
+           
+        \caption{Photoluminescence at negative bais detected on \ch{F8ZnPc} on (2ML)NaCl/Ag(111) with 300gr/mm grating (\stmlparams{-2.5}{200}{120}). Peak detected at \SI{640}{nm}, with lower energy vibrational peaks. Inset is the corresponding STM image with tip position during STML indicated (\stmparams{5}{5}{-2}{10})}
         \label{fig:opv:f8znpc-stml_-}
-    \end{subfigure}
-    
-    \begin{subfigure}{0.45\textwidth}
-        %\includegraphics[width=4in]{pictures/2019_11_07_F8ZnPc_shifts_lobe-centre.svg}
-        \caption{Changes in vibration satellite peaks as the tip is positioned over different parts of the \ch{F8ZnPc}. Parameters used were \SI{-2.5}{V}/\SI{100}{pA}/\SI{300}{s}.}
-        \label{fig:opv:f8znpc-stml_600gr}
-    \end{subfigure}
-    
-    \caption{\FIXME{maybe don't include the bias dependence}}
     
 \end{figure}
 
+
 The differences between the positive and negative bias \ac{STML} results could be explained by the effects described in the previous section. A broad vibrational peak in the negative bias emission in \autoref{fig:opv:f8znpc-stml_-} coincides at the energy of around \SI{670}{nm}---the same energy as the positive bias emission peak in \autoref{fig:opv:f8znpc-stml_+}---giving evidence for preferred vibrational exciton transitions at positive biases.
+
+\begin{figure}
+    \centering
+        \includegraphics[width=0.8\textwidth]{pictures/f8znpc_-ve_emission_inset600_position.png}
+        \caption{Changes in vibration satellite peaks as the tip is positioned over different parts of \ch{F8ZnPc} on (2ML)NaCl/Ag(111) with 600gr/mm grating. STML parameters were \stmlparams{-2.5}{100}{300} for each point. Inset is the corresponding STM image with tip position during STML indicated (\stmparams{5}{5}{-2}{10}).}
+        \label{fig:opv:f8znpc-stml_600gr}
+\end{figure}
 
 
 
@@ -179,18 +177,18 @@ Surprisingly, the \ac{STM} scans at negative biases revealed a variety of topogr
 
 \begin{figure} [h]
     \centering
-        %\includegraphics[width=4in]{pictures/2019_11_07_F8ZnPc_shifts_lobe-centre.svg}
-    \caption{\FIXME{image at positive and negative bias, demonstrating the diversity}}
+    \includegraphics[width=\textwidth]{pictures/diversity.png}
+    \caption{Same sample of \ch{F8ZnPc} on (2ML)NaCl/Ag(111) scanned at positive and negative biases. \textbf{(a)} STM image at \stmparams{20}{20}{2}{5}. All molecules appear the same. \textbf{(b)} STM image at \stmparams{20}{20}{-2}{5}. Same sample of molecules showing diversity in topography at negative bias. }
     \label{fig:opv:f8znpc-stm_diff}
 \end{figure}
 
 Further \ac{STML} experiments at negative biases were conducted on the different types of \ch{F8ZnPc}, with $S_1(0) \rightarrow S_0(0)$ transition peaks varying from \SI{630}{nm} to \SI{643}{nm}. In order to correspond the emission peaks to the electronic states of the molecules, \ac{STML} along with \ac{STS} was performed on three of the observed types (\autoref{fig:opv:f8znpc-sts_stml}). With decreasing band gap, there is a corresponding decrease in the optical gap, observed as lower energy emission from exciton recombination. Further experimentation on this sample was not attempted due to the unstable nature of the Ag tip, making it unsuitable for high resolution \ac{STM} or \ac{STS}, and the wide variety of types of \ch{F8ZnPc} observed on the surface. 
 
 
-\begin{figure} [h]
+\begin{figure} [H]
     \centering
-        %\includegraphics[width=4in]{pictures/2019_11_07_F8ZnPc_shifts_lobe-centre.svg}
-    \caption{\FIXME{grid and STML}}
+        \includegraphics[width=0.85\textwidth]{pictures/3species_diagram.png}
+        \caption{STM, STS and STML of 3 types of \ch{F8ZnPc} observed on (2ML)NaCl/Ag(111). \textbf{(a)} Three molecules labelled in STM image (\stmparams{7.5}{7.5}{-2.7}{10}). \textbf{(b)} Normalized $dI/dV$ of each molecule. \textbf{(c)} Photoluminescence of each molecule taken at \stmlparams{-2.5}{100}{120}. }
     \label{fig:opv:f8znpc-sts_stml}
 \end{figure}
 
@@ -198,7 +196,7 @@ Further \ac{STML} experiments at negative biases were conducted on the different
 
 \subsection{Adsorption geometry of \ch{F8ZnPc}}
 
-To further investigate the adsorption geometry of \ch{F8ZnPc} on the substrate, the same sample was prepared after a full system vent and bakeout to ensure all contaminants in the chambers were purged.\footnote{It was during this time that the new windows were installed (\autoref{fig:expsetup:windows}).} The Pt/Ir tip was used for consistent \ac{STM} and \ac{STS} of the \ch{F8ZnPc} on (2ML)NaCl/Ag(111). Despite the same sample preparation conditions, there were clear differences between the sample used for \ac{STML} experiments, and the sample used for investigating the adsorption geometry of \ch{F8ZnPc}. The insulating NaCl layers were noticeably free of defects, and there were fewer types of \ch{F8ZnPc} after deposition, making classification more manageable. This suggests that some of the molecular variety may have been the result of underlying defects. 
+To further investigate the adsorption geometry of \ch{F8ZnPc} on the substrate, the same sample was prepared after a full system vent and bakeout to ensure all contaminants in the chambers were purged.\footnote{It was during this time that the new windows were installed (\autoref{fig:expsetup:windows}).} The Pt/Ir tip was used for consistent \ac{STM} and \ac{STS} of the \ch{F8ZnPc} on (2ML)NaCl/Ag(111). Despite the same sample preparation conditions, there were clear differences between the sample used for \ac{STML} experiments, and the sample used for investigating the adsorption geometry of \ch{F8ZnPc}. The insulating NaCl layers had a lower denisty of defects, and there were fewer types of \ch{F8ZnPc} after deposition, making classification more manageable. This suggests that some of the molecular variety may have been the result of underlying defects. 
 
 % It was during this time that the new windows were installed (\autoref{fig:expsetup:windows}), but, due to time constraints, no additional \ac{STML} experiments were carried out.
 
@@ -207,8 +205,8 @@ To further investigate the adsorption geometry of \ch{F8ZnPc} on the substrate, 
 
 \begin{figure} [h]
     \centering
-        %\includegraphics[width=4in]{pictures/2019_11_07_F8ZnPc_shifts_lobe-centre.svg}
-    \caption{\FIXME{STS with each type}}
+        \includegraphics[width=\textwidth]{pictures/4types_images.png}
+    \caption{The four identified types of \ch{F8ZnPc} on (2ML)NaCl/Ag(111). \textbf{(a)} Normalized $dI/dV$ from point STS taken on each of the four types. \textbf{(b)} STM images of the four types ($V_b = -2.5V$ and $I_t = 5pA$). STM of types 1--3 are \SI{2.5x2.5}{nm}, while type 4 is \SI{3x3}{nm}. }
     \label{fig:opv:f8znpc-sts_types}
 \end{figure}
 
@@ -218,7 +216,7 @@ Furthermore, the configuration of each type of \ch{F8ZnPc} relative to the under
 
 \begin{figure} [h]
     \centering
-        %\includegraphics[width=4in]{pictures/2019_11_07_F8ZnPc_shifts_lobe-centre.svg}
+        \includegraphics[width=\textwidth]{pictures/4types_atomic.png}
     \caption{\FIXME{show the different types with adsorption geometry}}
     \label{fig:opv:f8znpc-atomic_types}
 \end{figure}
@@ -234,8 +232,6 @@ Comparing the results on ZnPc and \ch{F8ZnPc}, there are two processes involved 
 
 % talk about what we can relate back to ZnPc, T1 emission was observed. Furhter STML experimentation required on this new sample.
 The data seen in Figures \ref{fig:opv:f8znpc-sts_types} and \ref{fig:opv:f8znpc-atomic_types} confirms that the effects of adsorption geometry resulted in the diversity of molecules with differing orbital energy levels observed in the previous sample. And from the \ac{STML} data in \autoref{fig:opv:f8znpc-sts_stml}, there is a correlation between the change in electronic structure and the observed photoluminescence. But due to the differences in defect and contaminant density, and the resulting differences in observed types of \ch{F8ZnPc} on our samples, it is difficult to draw direct relationship between adsorption geometry and emission energy. Additional \ac{STML} experimentation could rectify this, although identification of classified types may be complicated by the instability of the Ag tip.
-
-\FIXME{Talk about my guesses in relating STML and adsorption goemetry? or leave that in the appendix?}
 
 
 
