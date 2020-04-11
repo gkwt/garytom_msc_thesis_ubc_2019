@@ -23,8 +23,8 @@ The energy levels of organic semiconducting molecules determines the electronic 
 
 \begin{figure} [h]
     \centering
-    %\includegraphics[width=3in,angle=-90]{pictures/etching.jpg}
-    \caption{\FIXME{DFT of HMAT alone}}
+    \includegraphics[width=0.8\textwidth]{pictures/HMAT_diagram.png}
+    \caption{Calculated density of states for HMAT in gas phase. HOMO and LUMO isosurfaces are pictured. The DFT band gap is \SI{4.45}{eV}. }
     \label{fig:oled:dft-hmat}
 \end{figure}
 
@@ -45,41 +45,34 @@ Being relatively difficult to synthesize, the functionalized \ac{HMAT} derivativ
 
 \section{{STM}/{STS} study of HMAT derivatives}
 
-The molecules were deposited onto the bare Ag(111) surface, and probed with a Pt/Ir tip dipped in silver. While the \ac{HMAT} molecule is highly stable, the attached functional groups were fragmented at high deposition temperatures. Large area \ac{STM} scans showed an abundance of fragments on the surface for each molecule deposition, even after repeated degassing (\autoref{fig:oled:hmat-frag}). 
-
-\begin{figure} [h]
-    \centering
-    %\includegraphics[width=3in,angle=-90]{pictures/etching.jpg}
-    \caption{\FIXME{show the fragmented images}}
-    \label{fig:oled:hmat-frag}
-\end{figure}
+The molecules were deposited onto the bare Ag(111) surface, and probed with a Pt/Ir tip dipped in silver. While the \ac{HMAT} molecule is highly stable, the attached functional groups were fragmented at high deposition temperatures. Large area \ac{STM} scans showed an abundance of fragments on the surface for each molecule deposition, even after repeated degassing.
 
 Fortunately, intact molecules were found with still attached functional groups. The molecules were scanned, and a pixel-by-pixel \ac{STS} grid was performed on the molecules on Ag(111). Taking the normalized differential conductance, the \ac{LDOS} was plotted as a function of energy, and the \ac{HOMO} and \ac{LUMO} orbitals were visualized spatially. \ac{DFT} calculations were performed for each of the \ac{HMAT} derivative molecules, and used as comparison to the experimental results. The results for HMAT-O, HMAT-TZ, and HMAT-HZ are shown in Figures \ref{fig:oled:hmat-o}, \ref{fig:oled:hmat-tz}, and \ref{fig:oled:hmat-hz}, respectively. 
 
-\begin{figure} [h]
+\begin{figure} [H]
     \centering
-    %\includegraphics[width=3in,angle=-90]{pictures/etching.jpg}
-    \caption{\FIXME{show hmat-o data}}
+    \includegraphics[width=0.7\textwidth]{pictures/HMATO_diagram.png}
+    \caption{ STM and STS data on HMAT-O on Ag(111). \textbf{(a)} Normalized $dI/dV$ on the donor (HMAT) and acceptor (oxadiazole) complex, indicated on the inset (\stmparams{6}{6}{0.1}{5}). \textbf{(b)} STS grid image of HOMO and LUMO at respective biases. Band gap is \SI{3.76}{eV}. \textbf{(c)} DFT calculated HOMO and LUMO. } % this z263 I(V)512 in July 3rd, 2019
     \label{fig:oled:hmat-o}
 \end{figure}
 
-\begin{figure} [h]
+\begin{figure} [H] 
     \centering
-    %\includegraphics[width=3in,angle=-90]{pictures/etching.jpg}
-    \caption{\FIXME{show hmat-tz data}}
+    \includegraphics[width=0.7\textwidth]{pictures/HMAT3N_diagram.png}
+    \caption{STM and STS data on HMAT-TZ on Ag(111). \textbf{(a)} Normalized $dI/dV$ on the donor (HMAT) and acceptor (triazine) complex, indicated on the inset (\FIXME{what is the scan parameter?}). \textbf{(b)} STS grid image of HOMO and LUMO at respective biases. Band gap is \SI{2.57}{eV}. \textbf{(c)} DFT calculated HOMO and LUMO.}
     \label{fig:oled:hmat-tz}
 \end{figure}
 
-\begin{figure} [h]
+\begin{figure} [H]
     \centering
-    %\includegraphics[width=3in,angle=-90]{pictures/etching.jpg}
-    \caption{\FIXME{show hmat-hz data}}
+    \includegraphics[width=0.7\textwidth]{pictures/HMAT7N_diagram.png}
+    \caption{STM and STS data on HMAT-HZ on Ag(111). \textbf{(a)} Normalized $dI/dV$ on the donor (HMAT) and acceptor (heptazine) complex, indicated on the inset (\stmparams{4}{4}{-1}{30}). \textbf{(b)} STS grid image of HOMO, LUMO, and LUMO+1 at respective biases. Band gap is \SI{2.41}{eV}. \textbf{(c)} DFT calculated HOMO, LUMO, and LUMO+1.}
     \label{fig:oled:hmat-hz}
 \end{figure}
 
 For each of the molecules, there is qualitative agreement in the molecular orbital distribution between the \ac{STS} and the \ac{DFT}---the \ac{HOMO} state is localized on the \ac{HMAT}, while the \ac{LUMO} state is localized on the acceptor group. In the case of \ac{HMAT-HZ}, the LUMO and the LUMO+1 were both imaged in \ac{STS}, and, as seen in the \ac{DFT} result, both were localized primarily on the heptazine.
 
-The experimental and theoretical band gaps for each molecule are summarized in \autoref{tab:oled:bandgaps} and \autoref{fig:oled:bandgap-diagram}. The exact band gap energies do not correspond between \ac{DFT} and \ac{STS}. This is expected, as the \ac{DFT} calculations do not account for the interactions between the molecule and substrate. The \ac{STS} experiments were performed without an insulating NaCl layer, so the molecular orbital energies experience significant shifts.
+The experimental and theoretical band gaps for each molecule are summarized in \autoref{tab:oled:bandgaps}. The exact band gap energies do not correspond between \ac{DFT} and \ac{STS}. This is expected, as the \ac{DFT} calculations do not account for the interactions between the molecule and substrate. The \ac{STS} experiments were performed without an insulating NaCl layer, so the molecular orbital energies experience significant shifts.
 
 \begin{table} [h]
 \begin{center}
@@ -88,24 +81,17 @@ The experimental and theoretical band gaps for each molecule are summarized in \
         Molecule  &  DFT band gap (eV)  &  STS band gap (eV) \\
         \hline
         HMAT     &    4.45   &  --- \\
-        HMAT-O   &    3.45   & 3.95 \\
-        HMAT-TZ  &    3.28   & 2.60 \\
-        HMAT-HZ  &    2.54   & 2.45 \\
+        HMAT-O   &    3.45   & 3.76 \\
+        HMAT-TZ  &    3.28   & 2.57 \\
+        HMAT-HZ  &    2.54   & 2.41 \\
         \hline
     \end{tabular}
-    \caption{\FIXME{caption this, values may be different with norm didv}}
+    \caption{Table of DFT calculated, and STS measured band gap (directly on Ag(111) substrate) of HMAT derivative molecules. The energy of the gap tend to decrease with increasingly electronegative acceptor groups attached.}
     \label{tab:oled:bandgaps}
     \end{center}
 \end{table}
 
-In both the \ac{DFT} and \ac{STS}, there is a clear trend in the HOMO-LUMO gap of each of the \ac{HMAT} derivatives. With the addition of increasingly electronegative species (with increasing number of \ch{O} and \ch{N} atoms), the electron affinity of the molecule increases, and the \ac{LUMO} is lowered in energy (\autoref{fig:oled:bandgap-diagram}). The \ac{HOMO} experiences no shift in energy relative to the Fermi level.
-
-\begin{figure} [h]
-    \centering
-    %\includegraphics[width=3in,angle=-90]{pictures/etching.jpg}
-    \caption{\FIXME{band gap shrinking diagram}}
-    \label{fig:oled:bandgap-diagram}
-\end{figure}
+In both the \ac{DFT} and \ac{STS}, there is a clear trend in the HOMO-LUMO gap of each of the \ac{HMAT} derivatives. With the addition of increasingly electronegative species (with increasing number of \ch{O} and \ch{N} atoms), the electron affinity of the molecule increases, and the \ac{LUMO} is lowered in energy. The \ac{HOMO} experiences no shift in energy relative to the Fermi level.
 
 No attempts were made to perform \ac{SPM} on these molecules on an insulating NaCl layer due to the fragility and instability of the molecules at higher biases. At tip-sample biases $|V_b| > \SI{2.5}{V}$, the molecules would shift on the surface, and the bonds between the \ac{HMAT} and the functional groups occasionally dissociated. The decoupling of the molecules from the substrate would have resulted in larger band gaps, meaning the molecular orbitals would likely not have been accessible by \ac{SPM}.
 
@@ -115,7 +101,7 @@ No attempts were made to perform \ac{SPM} on these molecules on an insulating Na
 
 While the molecules were not dissociated from the substrate by a bilayer of NaCl, \ac{STML} was attempted for \ac{HMAT-O} and \ac{HMAT-HZ}. With successfully resolved molecular states in the \ac{STS}, we hypothesized that the bulky methyl groups (six on each \ac{HMAT}) may have sterically disscoiates the molecule from the underlying Ag(111).
 
-However, with the Ag tip parked on the molecule at parameters up to \SI{3}{V}/\SI{200}{pA}/\SI{360}{s}, no molecular luminescence was detected, only the plasmonic emission. We also attempted to obtain an absorption spectra by exciting plasmonic photons near the molecule, a technique demonstrated in the past on ZnPc \cite{zhang2017sub}, but again, only the plasmonic emission was seen. The same experiments were repeated on Au(111), in an attempt to red-shift the plasmon emission so as to observe the two-photon absorption of the molecules. In all our experiments, no observable \ac{STML} molecular signatures were found from the HMAT-O or HMAT-HZ directly adsorbed on either Ag(111) or Au(111). 
+However, with the Ag tip parked on the molecule at parameters up to \stmlparams{3}{200}{360}, no molecular luminescence was detected, only the plasmonic emission. We also attempted to obtain an absorption spectra by exciting plasmonic photons near the molecule, a technique demonstrated in the past on ZnPc \cite{zhang2017sub}, but again, only the plasmonic emission was seen. The same experiments were repeated on Au(111), in an attempt to red-shift the plasmon emission so as to observe the two-photon absorption of the molecules. In all our experiments, no observable \ac{STML} molecular signatures were found from the HMAT-O or HMAT-HZ directly adsorbed on either Ag(111) or Au(111). 
 
 These failed attempts illustrate the importance of dissociation of the molecule from the substrate in \ac{STML}. Metal-molecule coupling results in additional energy pathways that rapidly quench excited states, and any emission signal from the molecule. Additionally, the instability and large band gaps of \ac{HMAT} derivatives make it difficult to inject charges into the electronic orbitals, or to generate high energy plasmonic emissions to form excitons in the material, without the molecules breaking or moving. 
 
