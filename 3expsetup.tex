@@ -33,8 +33,8 @@ The imaging \ac{SPM} head is shown in \autoref{fig:expsetup:head}. The entire ap
 
 \begin{figure} [h]
     \centering
-    \includegraphics[width=0.6\textwidth]{pictures/head.png}
-    \caption{\FIXME{STM head.}}
+    \includegraphics[width=0.5\textwidth]{pictures/head.png}
+    \caption{Image of the SPM head.}
     \label{fig:expsetup:head}
 \end{figure}
 
@@ -283,7 +283,7 @@ Unfortunately, the \ac{HMAT} derivatives were not stable at the sublimation temp
 
 \Acf{DFT} calculations were performed for the molecules, giving the molecular orbitals and energy levels of the isolated molecules. The results can be qualitatively compared to the experimental results. First, the chemical structures were drawn with the \textit{Avogadro} software \citep{hanwell2012avogadro}, which generated a file with the \ac{3D} coordinates of the atoms. As organic molecules can be flexible, different conformations were generated using the knowledge-based \ac{ETKDG} algorithm \citep{riniker2015better} built into the Python package \textit{RDKit} \citep{rdkit}. The \ac{UFF} \citep{rappe1992uff} was used to calculate the energy of the conformations, and the conformation with the lowest energy was selected for \ac{DFT} calculations. Due to the many aromatic rings in the molecules we studied, the possible conformations were limited to planar structures, comparable to the planar configuration of the molecules on our metallic substrate.
 
-Molecular orbitals and energy levels of free molecules were calculated using \ac{DFT} \emph{Gaussian 16} software package \citep{frisch2016gaussian}. The \ac{B3LYP} functional \citep{lee1988development,becke1993becke} and the 6-31G(d) \citep{frisch1984self} basis set was used for all calculations. A geometry optimization was performed on the conformer generated from molecular dynamics until the average force on all atoms were below $3\times 10^{-4}$ Ha/$r_{bohr}$. Finally, electronic structures of the fully relaxed molecules were calculated. The molecular orbitals were plotted with \textit{Avogadro}, while the energy levels were extracted with the \textit{Multiwfn} software \citep{lu2012multiwfn}. 
+Molecular orbitals and energy levels of free molecules were calculated using \ac{DFT} \emph{Gaussian 16} software package \citep{frisch2016gaussian}. The \ac{B3LYP} functional \citep{lee1988development,becke1993becke} and the 6-31G(d) \citep{frisch1984self} basis set was used for all calculations. A geometry optimization was performed on the conformer generated from molecular dynamics until the average force on all atoms were below $3\times 10^{-4}$ Ha/$r_{bohr}$. Finally, electronic structures of the fully relaxed molecules were calculated. The molecular orbitals were plotted with \textit{Avogadro}, with an electron density isosurface value of 0.02 electron/$r_{Bohr}^3$.
 
 It is important to reiterate that the \ac{DFT} results can only be qualitatively compared with the experimental results. The \ac{DFT} calculations on the isolated molecules do not account for the interactions between the substrate and the molecule such as hybridization or by Van der Waals forces. Additionally, geometrical changes to the molecule occur when they are adsorpted onto a surface, and a variety of stable conformations are possible.
 
