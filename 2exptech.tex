@@ -11,7 +11,7 @@ In this chapter, three \acf{SPM} techniques will be discussed in detail, includi
 %%%%%
 \section{Scanning tunnelling microscopy}
 
-\Acf{STM} was invented in 1981 by Gerd Binning and Heinrich R\"ohrer at IBM, and was the first example of a scanning probe microscope \citep{binnig1982surface}. The \ac{STM} gives atomic resolution topographic maps of the electronic structure of a conductive sample by employing quantum tunnelling between the sample and a conductive tip, controlled by sub-nanometre precise piezoelectric motors. As seen in \autoref{fig:exptech:stmsetup}, a sharp tip is brought close to a sample, with tip-sample distances ($z$) on the order of 1--\SI{10}{\angstrom}. A bias voltage difference ($V_b$) is in place between the electrodes, driving the directional quantum tunnelling of electrons through the vacuum potential barrier between the tip and the sample. A small but detectable tunnelling current ($I_t$), typically on the order of picoamperes, goes through a preamplifier and is transduced into a voltage signal, which can then be fed into a control system.
+\Acf{STM} was invented in 1981 by Gerd Binning and Heinrich R\"ohrer at IBM, and was the first example of a scanning probe microscope \citep{binnig1982surface}. The \ac{STM} gives atomic resolution topographic maps of the electronic structure of a conductive sample by employing quantum tunnelling between the sample and a conductive tip, controlled by sub-nanometre precise piezoelectric motors. As seen in \autoref{fig:exptech:stmsetup}, a sharp tip is brought close to a sample, with tip-sample distances ($z$) on the order of 1--\SI{10}{\angstrom}. A bias voltage difference ($V_b$) is in place between the electrodes, driving  directional quantum tunnelling of electrons through the vacuum potential barrier between the tip and the sample. A detected tunnelling current ($I_t$), typically on the order of picoamperes, goes through a preamplifier and is sent to the control system.
 
 \begin{figure} [h]
     \centering
@@ -20,11 +20,11 @@ In this chapter, three \acf{SPM} techniques will be discussed in detail, includi
     \label{fig:exptech:stmsetup}
 \end{figure}
 
-\sloppy An approximation of the tunnelling current could be gathered from a \ac{1D} one particle model (\autoref{fig:exptech:wkb}). The solutions of the Schr\"odinger equation in the tip and sample regions would be oscillatory free-electron wave functions\footnote{Electrons in a metal are assumed behave like free particles.}, while inside the barrier would give wave function $\psi(z) \propto e^{-kz}$, with $k^2 = 2m({V_B(z,V_b) - E})/\hbar^2$ where $V_B(z,V_b)$ is the barrier potential and $E$ is the energy of the tunnelling electron. For electrons with energies high enough and tip-sample distance $z$ small enough, the wave function would be non-zero on the other side of the barrier. From the \ac{1D} \ac{WKB} approximation, the probability of transmission is
+\sloppy An approximation of the tunnelling current could be gathered from a \ac{1D} one particle model (\autoref{fig:exptech:wkb}). The solutions of the Schr\"odinger equation in the tip and sample regions would give free-electron wave functions\footnote{Electrons in a metal are assumed behave like free particles.}, while inside the barrier---the vacuum gap between tip and sample---would give wave function $\psi(z) \propto e^{-kz}$, with $k^2 = 2m({U_B(z,V_b) - E})/\hbar^2$, where $U_B(z,V_b)$ is the barrier potential and $E$ is the energy of the tunnelling electron. For electrons with energies high enough and tip-sample distance $z$ small enough, the wave function would be non-zero on the other side of the barrier. From the \ac{1D} \ac{WKB} approximation, the probability of transmission is
 \begin{equation} \label{eq:exptech:transfcn}
-T(z,E,V_b) = \exp{\left(-2\int_{z_1} ^{z_2} k dz \right)} = \exp{\left(-2  \int_{z_1}^{z_2} \sqrt{\frac{2m}{\hbar^2}(V_B(z,V_b) - E)} dz \right)}.
+T(z,E,V_b) = \exp{\left(-2\int_{z_1} ^{z_2} k dz \right)} = \exp{\left(-2  \int_{z_1}^{z_2} \sqrt{\frac{2m}{\hbar^2}\left(U_B(z,V_b) - E\right)} dz \right)}.
 \end{equation}
-The barrier potential is unknown, and is often assumed be a trapezoidal barrier, as shown in \autoref{fig:exptech:wkb}. For experimental analysis, the trapezoidal barrier is further approximated by a rectangular barrier of height $V_B(V_b) = (\Phi_t + \Phi_s + eV_b)/2$. % For a constant bias voltage in \ac{STM}, we have $I_t \propto e^{-2kz}$. The tunnelling current is extremely sensitive to changes in $z$, dropping off exponentially with increasing tip-sample distances. This sensitivity allows for picometre height resolution, while the atomically sharp tip allows for sub-nanometre lateral resolution imaging.
+ The barrier potential is unknown, and is often assumed be a trapezoidal barrier, as shown in \autoref{fig:exptech:wkb}. For experimental analysis, the trapezoidal barrier is further approximated by a rectangular barrier of height $U_B(V_b) = (\Phi_t + \Phi_s + eV_b)/2$. For a constant bias voltage in \ac{STM}, the transmission probability in \autoref{eq:exptech:transfcn} decays exponentially, giving tunnelling current $I_t \propto e^{-2kz}$ sensitive to changes in tip-sample distance. This sensitivity allows for picometre height resolution, while a sharp tip allows for sub-nanometre lateral resolution imaging.
 
 
 \begin{figure} [t]
@@ -35,18 +35,18 @@ The barrier potential is unknown, and is often assumed be a trapezoidal barrier,
     \label{fig:exptech:wkb}
 \end{figure}
 
-
-There are two modes of \ac{STM} operation: the constant height, and the constant current mode. In both modes, the bias voltage is held constant. In constant height mode, the tip-sample distance is held constant while the tip is rastered across the sample. The corresponding fluctuations in the tunnelling current is measured as a function of the spatial variables. A drawback of this mode is the possibility of crashing the tip into the sample due to tall features on the surface, damaging both the tip and the sample. Alternatively, constant current mode holds the tunnelling current constant by using a feedback loop to adjust the tip height as it scans across the sample. In this case, the tip height is recorded as a function of the lateral $(x,y)$ positions of the tip, giving a tunnelling current isosurface plot (\autoref{fig:exptech:stmexample}). All \ac{STM} images presented in this thesis are obtained in constant current mode.
+%In both modes, the bias voltage is held constant. 
+There are two modes of \ac{STM} operation: the constant height, and the constant current mode. In constant height mode, the tip-sample distance is held constant while the tip is rastered across the sample. The corresponding fluctuations in the tunnelling current is measured as a function of the spatial variables. A drawback of this mode is the possibility of crashing the tip into the sample due to tall features on the surface, damaging both the tip and the sample. Alternatively, constant current mode holds the tunnelling current constant by using a feedback loop to adjust the tip height as it scans across the sample. In this case, the tip height is recorded as a function of the lateral $(x,y)$ positions of the tip, giving a tunnelling current isosurface plot (\autoref{fig:exptech:stmexample}), typically referred to as the topography. All \ac{STM} images presented in this thesis are obtained in constant current mode.
 
 \begin{figure} [h]
     \centering
-    \includegraphics[width=0.5\textwidth]{pictures/f8znpc_au111_-2p5V_2pA.jpg}
-    \caption{Constant current STM image (\stmparams{30}{30}{-2.5}{2}). \ch{F8ZnPc} molecules on Au(111) with herringbone reconstruction. Defects and contaminants observed on surface.}
+    \includegraphics[width=0.5\textwidth]{pictures/atomic_NaCl.jpg}
+    \caption[Constant current STM image of bilayer NaCl on Ag(111) (\stmparams{7}{7}{-1}{100}). The atoms of the NaCl(001) lattice are resolved, with the bright spots corresponding to the \ch{Cl-} ions. Various defects are observed on the lattice.]{Constant current STM image of bilayer NaCl on Ag(111) (\stmparams{7}{7}{-1}{100}). The atoms of the NaCl(001) lattice are resolved, with the bright spots corresponding to the \ch{Cl-} ions \citep{heidorn2013influence}. Various defects are observed on the lattice.}
     \label{fig:exptech:stmexample}
 \end{figure}
 
 % also talk about how to interpret the data, not exactly a physical topography
-It is important to note that an \ac{STM} image should not be interpreted as a physical topography, but rather the electronic topography of the surface at a given bias. This is because the tunnelling current is dependent on the \ac{DOS} of the sample and the tip. A larger `height' indicates a higher density of states at a given point and bias, and not necessarily a taller feature on the sample. More details on the tunnelling current is given in \autoref{sec:exptech:sts}.
+An \ac{STM} image should not be interpreted as a physical topography. The tunnelling current is dependent on both the tip-sample height and the \ac{LDOS} of the sample. More details on the tunnelling current are given in \autoref{sec:exptech:sts}.
 
 
 
@@ -55,14 +55,14 @@ It is important to note that an \ac{STM} image should not be interpreted as a ph
 \section{Scanning tunnelling spectroscopy}
 \label{sec:exptech:sts}
 
-\Acf{STS} is a technique similar to \ac{STM}, but allows for energetic resolution of the \ac{LDOS} of the sample. At a point over the sample, the tip is held at a constant height and the current feedback loop is turned off. The tunnelling current is then measured as the bias between tip and sample is swept across a range of values. For studying organic molecules, the bias typically goes up to $\sim \SI{3}{V}$ depending on the molecular stability and the energy at which the orbital features are found.
+\Acf{STS} is a technique similar to \ac{STM}, but allows for energetic resolution of the \ac{LDOS} of the sample. At a point over the sample, the tip is held at a constant height and the current feedback loop is turned off. The tunnelling current is then measured as the bias between tip and sample is swept across a range of values. For studying organic molecules, the bias typically ranges from $\SI{-3}{V}$ to $\SI{3}{V}$, depending on the molecular stability and the energy at which the orbital features are found.
 
 The relationship between the current signal, $I(V)$, and the \ac{LDOS} can be understood by returning to the \ac{1D} tunnelling model (\autoref{fig:exptech:stsldos}). The tip is assumed to have a constant density of states. The bias voltage shifts the energy of the electrons in the tip relative to those of the sample. At positive biases, the Fermi level\footnote{The Fermi level is the electrochemical potential of the material, or the energy at which there is 50\% state occupation at finite temperatures. This is not to be confused with the Fermi energy, which is defined for $T=0$K. The terms will be used interchangeably, as our experimental condition is close to absolute zero.} of the tip shifts up, allowing electrons to tunnel into the unoccupied states of the sample. Conversely, at negative biases, the Fermi level of the tip shifts down, allowing electrons to tunnel from the occupied sample states into the tip. Changes in the sample density of states $\rho_s(E)$, both occupied and unoccupied, will open new tunnelling channels that are reflected in changes in the measured $I(V)$. More details on the tunnelling current and the recovery of the density of states are described in the below sections.
 
 \begin{figure} [h]
     \centering
     \includegraphics[width=\textwidth]{pictures/sts_ldos.png}
-    \caption{Schematic showing the tunnelling process as a function of bias voltage. \textbf{(a)} At negative bias voltage, the tip Fermi energy is below the sample Fermi energy. The resulting current arises from electrons of the occupied sample LDOS tunnelling into the tip. \textbf{(b)} For positive bias voltages, the reverse process occurs, and electrons in the tip tunnel into the unoccupied sample LDOS.}
+    \caption{Schematic showing the tunnelling process as a function of bias voltage. \textbf{(a)} For positive bias voltages, the sample Fermi energy is below the tip Fermi energy. The resulting current arises from electrons of the occupied tip LDOS tunnelling into the sample. \textbf{(b)} At negative bias voltages, the reverse process occurs, and electrons in the sample tunnel into the unoccupied tip LDOS}
     \label{fig:exptech:stsldos}
 \end{figure}
 
@@ -71,9 +71,9 @@ The technique can be further extended by performing \ac{STS} pixel-by-pixel in a
 
 \subsection{Tunnelling theory}
 % \FIXME{Add Bardeen, Tersoff and Hamann, Feuchtwang, Caroli et al., JB Pendry, Gottlieb and Wesoloski citations.}
-In order to extract quantitative information from \ac{STS}, we must understand the theory of quantum tunnelling, and its application to the tip-sample configuration of the experiment. The first theoretical formulation of many particle tunnelling was developed by \textit{Bardeen} in 1960, using what was called a `transfer Hamiltonian' \citep{PhysRevLett.6.57}. It was then applied to \ac{STM}/\ac{STS} by \textit{Tersoff and Hamann} \citep{0957-4484-17-8-R01,tersoff1985theory}. 
+In order to extract quantitative information from \ac{STS}, we must understand the theory of quantum tunnelling, and its application to the tip-sample configuration of the experiment. The first theoretical formulation of many particle tunnelling was developed by \textit{Bardeen} in 1960, using what was called a ``transfer Hamiltonian" \citep{PhysRevLett.6.57}. It was then applied to \ac{STM}/\ac{STS} by \textit{Tersoff and Hamann} \citep{0957-4484-17-8-R01,tersoff1985theory}. 
 
-It is important to note that Bardeen's formulation is an approximation and does not take into account many-body effects, strong tip-sample interactions, and strong tunnelling. To date, the most rigorous analytic tunnelling theory is formulated using \acp{NEGF}, first developed by \textit{Feuchtwang} and later expanded upon by \textit{Pendry et al.}, which can address the short-comings of the transfer Hamiltonian \citep{feuchtwang1974tunneling, pendry1991theory} . However, there is currently no method to utilise \acp{NEGF} to extract \ac{DOS} from experimental \ac{STS} data. Furthermore, the \ac{NEGF} tunnelling theory has been demonstrated to be reducible to Bardeen's tunnelling theory, and thus, this section will discuss the transfer Hamiltonian approach to tunnelling, as discussed in reference \citep{0957-4484-17-8-R01}.
+Bardeen's formulation does not take into account many-body effects, strong tip-sample interactions, and strong tunnelling. To date, the most rigorous analytic tunnelling theory is formulated using \acp{NEGF}, first developed by \textit{Feuchtwang} and later expanded upon by \textit{Pendry et al.}, which can address the short-comings of the transfer Hamiltonian \citep{feuchtwang1974tunneling, pendry1991theory}. However, the transfer Hamiltonian formulation is sufficient for extracting the \ac{LDOS} from experimental \ac{STS} data, with the conditions for validity approximated in experiment. Furthermore, the \ac{NEGF} tunnelling theory has been demonstrated to be reducible to Bardeen's tunnelling theory, and thus, this section will discuss the transfer Hamiltonian approach to tunnelling, as discussed in reference \citep{0957-4484-17-8-R01}.
 
 % taken from Guide on tunnelling Theory
 In assuming that the tip and sample are independent, with weak interactions between them, we can define the sample and tip Hamiltonians separately as
@@ -124,11 +124,11 @@ For sufficiently large $t$, the sinc function can be approximated as the Dirac $
 \end{align}
 where $\rho_t(\epsilon)$ is the tip density of states near $\epsilon$, the eigenenergy of the sample state $\psi$. The equation above is also known as Fermi's Golden Rule. The matrix elements $\abs{\mathfrak{M}}^2 = \abs{\Bra{\phi_\epsilon} H - H_s \Ket{\psi}}^2$ is the transition probability of the sample state into a tip state near $\epsilon$, denoted as $\phi_\epsilon$.
 
-To get the tunnelling current, we look to the work of Tersoff and Hamann, considering tunnelling from either sides of the junction. We continue to assume independent sample and tip and weak tunnelling, such that the addition or removal of electrons do not greatly affect the chemical potentials of the tip and sample, $\mu_t$ and $\mu_s$ respectively. We will also assume a low bias so that band-bending phenomena is negligible.
+To get the tunnelling current, we look to the work of Tersoff and Hamann, considering tunnelling from either sides of the junction. We continue to assume independent sample and tip and weak tunnelling, such that the addition or removal of electrons do not greatly affect the chemical potentials of the tip and sample, $\mu_t$ and $\mu_s$ respectively. We will also assume a low bias so that band-bending phenomena is negligible, and the vacuum barrier can be approximated as a rectangular potential.
 
 In these limits, the statistics of the electrons are governed by the Fermi-Dirac distribution: at temperature $T$ and chemical potential $\mu$, the probability finding an electron at energy $E$ is $F_{\mu, T}(E) = ({e^{(E-\mu)/k_BT} +1})^{-1}$. The tunnelling of electrons \emph{from} a \emph{filled} sample state $\psi_n$ with energy $\epsilon_n$ into an empty tip state would be
 \begin{equation} \label{eq:exptech:Is->t}
-    I_{s\rightarrow t} = \frac{2\pi e}{\hbar} \sum_n F_{\mu_s, T}(\epsilon_n) (1-F_{\mu_t, T}(\epsilon_n))  \rho_{t}(\epsilon_n) \abs{\mathfrak{M}}^2 
+    I_{s\rightarrow t} = \frac{2\pi e}{\hbar} \sum_n F_{\mu_s, T}(\epsilon_n) (1-F_{\mu_t, T}(\epsilon_n))  \rho_{t}(\epsilon_n) \abs{\mathfrak{M}}^2 ,
 \end{equation}
 where $e$ is the elementary charge. The tunnelling of electrons \emph{into} an \emph{empty} sample state $\psi_n$ from filled tip states near energy $\epsilon_n$ would be 
 \begin{equation} \label{eq:exptech:It->s}
@@ -148,21 +148,21 @@ The entire expression can be approximated by an integral
 \end{equation}
 where the matrix elements are approximated by averaging over the sample states $\phi$ near the energy $E$, giving $\abs{\mathfrak{M}}^2 \approx T(E,V_b,z) \rho_s(E)$, where $T(E,V_b,z)$ is the transmission probability in \autoref{eq:exptech:transfcn} .
 
-Taking the limit of $T \rightarrow \SI{0}{\kelvin}$, the Fermi-Dirac equations become Heaviside functions, and $f(E,V_b) = 1$ for $E \in [0,eV_b]$, and 0 elsewhere. Physically, only electrons with energies between the Fermi levels of the sample and tip contribute to the tunnelling current; the expression for the tunnelling current becomes
+In the low temperature limit, the Fermi-Dirac equations approach the Heaviside functions, but are thermally broadened at temperatures above absolute zero, limiting the energy resolution of \ac{STS}. Physically, only electrons with energies between the Fermi levels of the sample and tip contribute to the tunnelling current; the expression for the tunnelling current becomes
 \begin{equation} \label{eq:exptech:tersoffcurrent}
 I_{T \rightarrow 0K} \approx \frac{2\pi e}{\hbar} \int_{0} ^{eV_b} dE \rho_{t}(E) \rho_{s}(E) T(E,V_b,z).
 \end{equation}
 
-It is important to remember the limits in which this equation is valid. From Bardeen's formalism, we assume (1) no electron-electron interaction, (2) independent tip and sample states, and (3) weak tunnelling. In Tersoff and Hamann's analysis, we further assume (4) Fermi-Dirac statistics, (5) first-order \ac{WKB} tunnelling, (6) low temperatures, and (7) negligible band-bending effects. In general, these conditions hold when the tip and sample are sufficiently far apart, and bias between the two are sufficiently low.
+It is important to remember the limits in which this equation is valid. From Bardeen's formalism, we assume (1) independent tip and sample states, and (2) weak tunnelling. In Tersoff and Hamann's analysis, we further assume (3) Fermi-Dirac statistics, (4) first-order \ac{WKB} tunnelling, (5) low temperatures, and (6) negligible band-bending effects. In general, these conditions hold when the tip and sample are sufficiently far apart, and bias between the two are sufficiently low.
 
 
-\subsection{Normalisation of $dI/dV$}
+\subsection{Normalization of $dI/dV$}
 
 From the Tersoff and Hamann equation, we can extract the density of states of the sample from the \ac{STS} spectra. In \autoref{eq:exptech:tersoffcurrent}, the current is a convolution of the \ac{DOS} of the tip and sample, and the transmission probability. Assuming that the \ac{DOS} of the tip is featureless, and equal to unity
 \begin{equation}
 I \propto \int_0 ^{eV} dE \rho_s(E) T(E,V,z) .
 \end{equation}
-In taking the derivative with respect to the bias voltage\footnote{The subscript in $V_b$ is implied. The $V$ is no longer used to discuss potential barriers, and is used exclusively to indicate the bias voltage.}, we obtain the differential conductance
+In taking the derivative with respect to the bias voltage\footnote{The subscript in $V_b$ is implied.}, we obtain the differential conductance
 \begin{equation} \label{eq:exptech:didv}
 \frac{dI}{dV} \propto e \rho_s(E=eV) T(E=eV,eV,z) + e \int_0^{eV} dE \rho_s(E) \frac{dT(E,V,z)}{dV}  .
 \end{equation}
@@ -173,7 +173,7 @@ A commonly used form for the \ac{DOS} of the sample, $\rho_s(E) \propto dI/dV $,
 \end{equation}
 In this form, the transmission probability appears in ratios with itself, qualitatively canceling the exponential form. The normalised differential conductance gives the $\rho_s(eV)$ with some ``background" term arising from interactions of the wavefunction with the electric field in the junction.
 
-However in \autoref{eq:exptech:normdidv}, divergences arise when we consider $V=\SI{0}{\volt}$ or $I= \SI{0}{\ampere}$. To mitigate this, a small constant term can be added to the conductance without significantly modifying the normalisation term \citep{prietsch1991structural}
+However in \autoref{eq:exptech:normdidv}, divergences arise when we consider $V=\SI{0}{\volt}$ or $I= \SI{0}{\ampere}$. To mitigate this, a small constant term can be added to the conductance without significantly modifying the normalization term \citep{prietsch1991structural}
 \begin{equation}
     \overline{I/V} = \sqrt{(I/V)^2 + c^2},
 \end{equation}
