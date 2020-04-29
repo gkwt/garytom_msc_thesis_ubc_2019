@@ -11,7 +11,7 @@ In this chapter, three \acf{SPM} techniques will be discussed in detail, includi
 %%%%%
 \section{Scanning tunnelling microscopy}
 
-\Acf{STM} was invented in 1981 by Gerd Binning and Heinrich R\"ohrer at IBM, and was the first example of a scanning probe microscope \citep{binnig1982surface}. The \ac{STM} gives atomic resolution topographic maps of the electronic structure of a conductive sample by employing quantum tunnelling between the sample and a conductive tip, controlled by sub-nanometre precision piezoelectric motors. As seen in \autoref{fig:exptech:stmsetup}, a sharp tip is brought close to a sample, with tip-sample distances ($z$) on the order of 1--\SI{10}{\angstrom}. A bias voltage difference ($V_b$) is in place between the electrodes, driving net directional quantum tunnelling of electrons through the vacuum potential barrier between the tip and the sample. A detected tunnelling current ($I_t$), typically on the order of picoamperes, goes through a preamplifier and is sent to the control system.
+\Acf{STM} was invented in 1981 by Gerd Binnig and Heinrich R\"ohrer at IBM, and was the first example of a scanning probe microscope \citep{binnig1982surface}. The \ac{STM} gives atomic resolution topographic maps of the electronic structure of a conductive sample by employing quantum tunnelling between the sample and a conductive tip, controlled by sub-nanometre precision piezoelectric motors. As seen in \autoref{fig:exptech:stmsetup}, a sharp tip is brought close to a sample, with tip-sample distances ($z$) on the order of 1--\SI{10}{\angstrom}. A bias voltage difference ($V_b$) is in place between the electrodes, driving net directional quantum tunnelling of electrons through the vacuum potential barrier between the tip and the sample. A detected tunnelling current ($I_t$), typically on the order of picoamperes, goes through a preamplifier and is sent to the control system.
 
 \begin{figure} [h]
     \centering
@@ -57,7 +57,7 @@ An \ac{STM} image should not be interpreted as a physical topography. The tunnel
 
 \Acf{STS} is a technique similar to \ac{STM}, but allows for energetic resolution of the \ac{LDOS} of the sample. At a point over the sample, the tip is held at a constant height and the current feedback loop is turned off. The tunnelling current is then measured as the bias between tip and sample is swept across a range of values. For studying organic molecules, the bias typically ranges from $\SI{-3}{V}$ to $\SI{3}{V}$, depending on the molecular stability and the energies at which the orbital features are found.
 
-The relationship between the current signal, $I(V)$, and the \ac{LDOS} can be understood by returning to the \ac{1D} tunnelling model (\autoref{fig:exptech:stsldos}). The tip is assumed to have a constant density of states. The bias voltage shifts the energy of the electrons in the tip relative to those of the sample. At positive biases, the Fermi level\footnote{The Fermi level is the electrochemical potential of the material, or the energy at which there is 50\% state occupation at finite temperatures. This is not to be confused with the Fermi energy, which is defined for $T=0$K. The terms will be used interchangeably, as our experimental condition is close to absolute zero.} of the tip shifts up, allowing electrons to tunnel into the unoccupied states of the sample. Conversely, at negative biases, the Fermi level of the tip shifts down, allowing electrons to tunnel from the occupied sample states into the tip. Changes in the sample density of states $\rho_s(E)$, both occupied and unoccupied, will open new tunnelling channels that are reflected in changes in the measured $I(V)$. More details on the tunnelling current and the recovery of the density of states are described in the below sections.
+The relationship between the current signal, $I(V)$, and the \ac{LDOS} can be understood by returning to the \ac{1D} tunnelling model (\autoref{fig:exptech:stsldos}). The tip is assumed to have a constant density of states. The bias voltage shifts the energy of the electrons in the tip relative to those of the sample. At positive biases, the Fermi level\footnote{The Fermi level is the electrochemical potential of the material, or the energy at which there is 50\% state occupation at finite temperatures. This is not to be confused with the Fermi energy, which is defined for $T=\SI{0}{K}$. The terms will be used interchangeably, as our experimental condition is close to absolute zero.} of the tip shifts up, allowing electrons to tunnel into the unoccupied states of the sample. Conversely, at negative biases, the Fermi level of the tip shifts down, allowing electrons to tunnel from the occupied sample states into the tip. Changes in the sample density of states $\rho_s(E)$, both occupied and unoccupied, will open new tunnelling channels that are reflected in changes in the measured $I(V)$. More details on the tunnelling current and the recovery of the density of states are described in the below sections.
 
 \begin{figure} [h]
     \centering
@@ -146,11 +146,11 @@ The entire expression can be approximated by an integral
 \begin{equation}
     I \approx \frac{2\pi e}{\hbar} \int_{-\infty}^\infty dE f(E,V_b) \rho_t(E)\rho_s(E) T(E,V_b,z),
 \end{equation}
-where the matrix elements are approximated by averaging over the sample states $\phi$ near the energy $E$, giving $\abs{\mathfrak{M}}^2 \approx T(E,V_b,z) \rho_s(E)$, where $T(E,V_b,z)$ is the transmission probability in \autoref{eq:exptech:transfcn} .
+where the matrix elements are approximated by averaging over the sample states $\phi$ near the energy $E$, giving $\abs{\mathfrak{M}}^2 \approx T(z,E,V_b) \rho_s(E)$, where $T(z,E,V_b)$ is the transmission probability in \autoref{eq:exptech:transfcn} .
 
 In the low temperature limit, the Fermi-Dirac equations approach the Heaviside functions, but are thermally broadened at temperatures above absolute zero, limiting the energy resolution of \ac{STS}. Physically, only electrons with energies between the Fermi levels of the sample and tip contribute to the tunnelling current; the expression for the tunnelling current becomes
 \begin{equation} \label{eq:exptech:tersoffcurrent}
-I_{T \rightarrow \SI{0}{K}} \approx \frac{2\pi e}{\hbar} \int_{0} ^{eV_b} dE \rho_{t}(E) \rho_{s}(E) T(E,V_b,z).
+I_{T \rightarrow \SI{0}{K}} \approx \frac{2\pi e}{\hbar} \int_{0} ^{eV_b} dE \rho_{t}(E) \rho_{s}(E) T(z,E,V_b).
 \end{equation}
 
 It is important to remember the limits in which this equation is valid. From Bardeen's formalism, we assume (1) independent tip and sample states, and (2) weak tunnelling. In Tersoff and Hamann's analysis, we further assume (3) Fermi-Dirac statistics, (4) first-order \ac{WKB} tunnelling, (5) low temperatures, and (6) negligible band-bending effects. In general, these conditions hold when the tip and sample are sufficiently far apart, and bias between the two is sufficiently low.
@@ -160,18 +160,18 @@ It is important to remember the limits in which this equation is valid. From Bar
 
 From the Tersoff and Hamann equation, we can extract the density of states of the sample from the \ac{STS} spectra. In \autoref{eq:exptech:tersoffcurrent}, the current is a convolution of the \ac{DOS} of the tip and sample, and the transmission probability. Assuming that the \ac{DOS} of the tip is featureless, and equal to unity
 \begin{equation}
-I \propto \int_0 ^{eV} dE \rho_s(E) T(E,V,z) .
+I \propto \int_0 ^{eV} dE \rho_s(E) T(z,E,V) .
 \end{equation}
 In taking the derivative with respect to the bias voltage\footnote{The subscript in $V_b$ is implied.}, we obtain the differential conductance
 \begin{equation} \label{eq:exptech:didv}
-\frac{dI}{dV} \propto e \rho_s(E=eV) T(E=eV,eV,z) + e \int_0^{eV} dE \rho_s(E) \frac{dT(E,V,z)}{dV}  .
+\frac{dI}{dV} \propto e \rho_s(E=eV) T(z,E=eV,V) + e \int_0^{eV} dE \rho_s(E) \frac{dT(z,E,V)}{dV}  .
 \end{equation}
 
-A commonly used form for the \ac{DOS} of the sample, $\rho_s(E) \propto dI/dV $, where, for small enough biases ($\sim \SI{10}{\milli\electronvolt}$), the integral term in \autoref{eq:exptech:didv} is ignored \citep{feenstra1993methods}. However, for studies of organic semiconductor molecules, features are often found at larger biases ($\sim 1$--$\SI{3}{\electronvolt}$), which would be obscured by the exponential form of the transmission probability (\autoref{eq:exptech:transfcn}). To eliminate the exponential dependence, the differential conductance can be ``normalized" with the conductance  \citep{feenstra1987atom}
+A commonly used form for the \ac{DOS} of the sample is $\rho_s(E) \propto dI/dV $, where, for small enough biases ($\sim \SI{10}{\milli\electronvolt}$), the integral term in \autoref{eq:exptech:didv} is ignored \citep{feenstra1993methods}. However, for studies of organic semiconductor molecules, features are often found at larger biases ($\sim 1$--$\SI{3}{\electronvolt}$), which would be obscured by the exponential form of the transmission probability (\autoref{eq:exptech:transfcn}). To eliminate the exponential dependence, the differential conductance can be ``normalized" with the conductance  \citep{feenstra1987atom}
 \begin{equation} \label{eq:exptech:normdidv}
-\frac{dI/dV}{I/V} = \frac{\rho_s(eV) + \int_0 ^{eV} dE \frac{\rho_s(E)}{T(E=eV,eV)} \frac{dT(E,V,z)}{dV}}{ \frac{1}{eV} \int_0^{eV} dE \rho_s(E) \frac{T(E,eV)}{T(E=eV,eV)}}.
+\frac{dI/dV}{I/V} = \frac{e\rho_s(eV) + e\int_0 ^{eV} dE \frac{\rho_s(E)}{T(z,E=eV,V)} \frac{dT(z,E,V)}{dV}}{ \frac{1}{V} \int_0^{eV} dE \rho_s(E) \frac{T(z,E,V)}{T(z,E=eV,V)}}.
 \end{equation}
-In this form, the transmission probability appears in ratios with itself, qualitatively canceling the exponential form. The normalized differential conductance gives the $\rho_s(eV)$ with an additional term arising from interactions of the wave function with the electric field in the junction.
+In this form, the transmission probability appears in ratios with itself, qualitatively cancelling the exponential form. The normalized differential conductance gives the $\rho_s(eV)$ with an additional term arising from interactions of the wave function with the electric field in the junction.
 
 However in \autoref{eq:exptech:normdidv}, divergences arise when we consider $V=\SI{0}{\volt}$ or $I= \SI{0}{\ampere}$. To mitigate this, a small constant term can be added to the conductance without significantly modifying the normalization term \citep{prietsch1991structural}
 \begin{equation}
