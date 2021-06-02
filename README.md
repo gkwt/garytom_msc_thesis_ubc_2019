@@ -5,3 +5,4 @@ Original template was made by Brian de Alwis (bsd@acm.org), in this [repository]
 Formatting requires are found in: [_Thesis Specifications_](http://www.grad.ubc.ca/current-students/dissertation-thesis-preparation/structure-ubc-theses-dissertations)
 and [_Formatting Requirements_](http://www.grad.ubc.ca/current-students/dissertation-thesis-preparation/formatting-requirements). 
 
+Final submitted thesis can be accessed [here](https://open.library.ubc.ca/collections/24/items/1.0390310)
